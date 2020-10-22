@@ -1,0 +1,343 @@
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\ApplicationInsights.config
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\csc.exe
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\System.Collections.Immutable.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\System.Reflection.Metadata.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\vbc.exe
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\VBCSCompiler.exe
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\VBCSCompiler.exe.config
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\SanjivaniERP.dll.config
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\SanjivaniERP.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\SanjivaniERP.pdb
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Antlr3.Runtime.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\EntityFramework.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\EntityFramework.SqlServer.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.AI.Agent.Intercept.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.AI.DependencyCollector.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.AI.Web.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.AI.WindowsServer.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.ApplicationInsights.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.AspNet.Identity.Core.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Security.Cookies.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Security.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Security.Facebook.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Security.Google.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Security.OAuth.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Security.Twitter.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.Web.Infrastructure.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Newtonsoft.Json.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Owin.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\SanjivaniBusinessLayer.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\SanjivaniModalView.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\System.Web.Helpers.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\System.Web.Mvc.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\System.Web.Optimization.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\System.Web.Razor.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\System.Web.WebPages.Deployment.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\System.Web.WebPages.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\System.Web.WebPages.Razor.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\WebGrease.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\SanjivaniDataLinkLayer.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\SanjivaniBusinessLayer.pdb
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\SanjivaniModalView.pdb
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Hangfire.Core.xml
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Hangfire.Dashboard.Authorization.xml
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\SanjivaniDataLinkLayer.pdb
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\obj\Debug\SanjivaniERP.csprojResolveAssemblyReference.cache
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\obj\Debug\SanjivaniERP.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\obj\Debug\SanjivaniERP.pdb
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Hangfire.Core.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Hangfire.Dashboard.Authorization.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Hangfire.SqlServer.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Hangfire.SqlServer.xml
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\ca\Hangfire.Core.resources.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\es\Hangfire.Core.resources.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\fa\Hangfire.Core.resources.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\fr\Hangfire.Core.resources.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\nl\Hangfire.Core.resources.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\pt\Hangfire.Core.resources.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\pt-BR\Hangfire.Core.resources.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\pt-PT\Hangfire.Core.resources.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\zh\Hangfire.Core.resources.dll
+D:\sanjivani\Sanjivani\SanjivaniERP\SanjivaniERP\bin\zh-TW\Hangfire.Core.resources.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\ApplicationInsights.config
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\csc.exe
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\System.Collections.Immutable.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\System.Reflection.Metadata.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\vbc.exe
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\VBCSCompiler.exe
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\VBCSCompiler.exe.config
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\SanjivaniERP.dll.config
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\SanjivaniERP.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\SanjivaniERP.pdb
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Antlr3.Runtime.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\EntityFramework.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\EntityFramework.SqlServer.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Hangfire.Core.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Hangfire.Dashboard.Authorization.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Hangfire.SqlServer.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.AI.DependencyCollector.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.AI.Web.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.AI.WindowsServer.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.ApplicationInsights.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Security.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Security.Google.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.Web.Infrastructure.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Newtonsoft.Json.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Owin.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\SanjivaniBusinessLayer.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\SanjivaniModalView.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\System.Web.Helpers.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\System.Web.Mvc.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\System.Web.Optimization.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\System.Web.Razor.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\System.Web.WebPages.Deployment.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\System.Web.WebPages.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\System.Web.WebPages.Razor.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\WebGrease.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\SanjivaniDataLinkLayer.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\SanjivaniBusinessLayer.pdb
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\SanjivaniModalView.pdb
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Hangfire.Core.xml
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Hangfire.Dashboard.Authorization.xml
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Hangfire.SqlServer.xml
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\SanjivaniDataLinkLayer.pdb
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\ca\Hangfire.Core.resources.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\es\Hangfire.Core.resources.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\fa\Hangfire.Core.resources.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\fr\Hangfire.Core.resources.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\nl\Hangfire.Core.resources.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\pt\Hangfire.Core.resources.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\pt-BR\Hangfire.Core.resources.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\pt-PT\Hangfire.Core.resources.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\zh\Hangfire.Core.resources.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\bin\zh-TW\Hangfire.Core.resources.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\obj\Debug\SanjivaniERP.csprojResolveAssemblyReference.cache
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\obj\Debug\SanjivaniERP.dll
+D:\Projects\Sanjivani\SanjivaniERP\SanjivaniERP\obj\Debug\SanjivaniERP.pdb
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\SanjivaniERP.pdb
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\ApplicationInsights.config
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\csc.exe
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\System.Collections.Immutable.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\System.Reflection.Metadata.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\vbc.exe
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\VBCSCompiler.exe
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\roslyn\VBCSCompiler.exe.config
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\SanjivaniERP.dll.config
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\SanjivaniERP.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Antlr3.Runtime.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\EntityFramework.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\EntityFramework.SqlServer.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Hangfire.Core.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Hangfire.Dashboard.Authorization.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Hangfire.SqlServer.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.AI.DependencyCollector.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.AI.Web.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.AI.WindowsServer.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.ApplicationInsights.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Security.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Security.Google.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Microsoft.Web.Infrastructure.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Newtonsoft.Json.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Owin.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\SanjivaniBusinessLayer.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\SanjivaniModalView.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\System.Web.Helpers.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\System.Web.Mvc.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\System.Web.Optimization.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\System.Web.Razor.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\System.Web.WebPages.Deployment.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\System.Web.WebPages.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\System.Web.WebPages.Razor.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\WebGrease.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\SanjivaniDataLinkLayer.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\SanjivaniBusinessLayer.pdb
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\SanjivaniModalView.pdb
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Hangfire.Core.xml
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Hangfire.Dashboard.Authorization.xml
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\Hangfire.SqlServer.xml
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\SanjivaniDataLinkLayer.pdb
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\ca\Hangfire.Core.resources.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\es\Hangfire.Core.resources.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\fa\Hangfire.Core.resources.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\fr\Hangfire.Core.resources.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\nl\Hangfire.Core.resources.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\pt\Hangfire.Core.resources.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\pt-BR\Hangfire.Core.resources.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\pt-PT\Hangfire.Core.resources.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\zh\Hangfire.Core.resources.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\bin\zh-TW\Hangfire.Core.resources.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\obj\Debug\SanjivaniERP.csprojResolveAssemblyReference.cache
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\obj\Debug\SanjivaniERP.dll
+D:\Vijay Project\DellBackUp\Sanjivani\SanjivaniERP\SanjivaniERP\obj\Debug\SanjivaniERP.pdb
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\ApplicationInsights.config
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\roslyn\csc.exe
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\roslyn\System.Collections.Immutable.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\roslyn\System.Reflection.Metadata.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\roslyn\vbc.exe
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\roslyn\VBCSCompiler.exe
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\roslyn\VBCSCompiler.exe.config
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\SanjivaniERP.dll.config
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\SanjivaniERP.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\SanjivaniERP.pdb
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\Antlr3.Runtime.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\EntityFramework.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\EntityFramework.SqlServer.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\Microsoft.AI.DependencyCollector.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\Microsoft.AI.Web.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\Microsoft.AI.WindowsServer.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\Microsoft.ApplicationInsights.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Security.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Security.Google.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\Microsoft.Web.Infrastructure.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\Newtonsoft.Json.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\Owin.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\SanjivaniBusinessLayer.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\SanjivaniModalView.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\System.Web.Helpers.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\System.Web.Mvc.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\System.Web.Optimization.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\System.Web.Razor.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\System.Web.WebPages.Deployment.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\System.Web.WebPages.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\System.Web.WebPages.Razor.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\WebGrease.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\SanjivaniDataLinkLayer.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\SanjivaniBusinessLayer.pdb
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\SanjivaniModalView.pdb
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\bin\SanjivaniDataLinkLayer.pdb
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\obj\Debug\SanjivaniERP.csprojResolveAssemblyReference.cache
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\obj\Debug\SanjivaniERP.dll
+D:\Sanjivani Project\SanjivaniERP\SanjivaniERP\obj\Debug\SanjivaniERP.pdb
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\ApplicationInsights.config
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\roslyn\csc.exe
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\roslyn\System.Collections.Immutable.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\roslyn\System.Reflection.Metadata.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\roslyn\vbc.exe
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\roslyn\VBCSCompiler.exe
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\roslyn\VBCSCompiler.exe.config
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\SanjivaniERP.dll.config
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\SanjivaniERP.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\SanjivaniERP.pdb
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\Antlr3.Runtime.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\EntityFramework.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\EntityFramework.SqlServer.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\Microsoft.AI.DependencyCollector.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\Microsoft.AI.Web.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\Microsoft.AI.WindowsServer.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\Microsoft.ApplicationInsights.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\Microsoft.Owin.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\Microsoft.Owin.Security.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\Microsoft.Owin.Security.Google.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\Microsoft.Web.Infrastructure.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\Newtonsoft.Json.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\Owin.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\SanjivaniBusinessLayer.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\SanjivaniModalView.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\System.Web.Helpers.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\System.Web.Mvc.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\System.Web.Optimization.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\System.Web.Razor.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\System.Web.WebPages.Deployment.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\System.Web.WebPages.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\System.Web.WebPages.Razor.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\WebGrease.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\SanjivaniDataLinkLayer.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\SanjivaniBusinessLayer.pdb
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\SanjivaniModalView.pdb
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\bin\SanjivaniDataLinkLayer.pdb
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\obj\Debug\SanjivaniERP.csprojResolveAssemblyReference.cache
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\obj\Debug\SanjivaniERP.dll
+D:\Sanjivani Project\SanjivaniVersion1\SanjivaniERP\obj\Debug\SanjivaniERP.pdb
