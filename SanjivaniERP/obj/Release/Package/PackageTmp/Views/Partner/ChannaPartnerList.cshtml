@@ -24,7 +24,7 @@
                     <div class="form-group col-md-3" style="margin-top: 10px;">
 
 
-                        <a class="btn btn-danger btn-md" href="@Url.Action("Chennelpartner","Partner",new { CustId="0"})" style="color:white"><i class="fa fa-plus"></i> Add New CP</a>
+                        <a class="btn btn-danger btn-md" href="@Url.Action("Chennelpartner","Partner",new { CustId="0",EditId="0"})" style="color:white"><i class="fa fa-plus"></i> Add New CP</a>
                         <button class="btn btn-success btn-md" onclick="write_to_excel()"><i class="fa fa-file-o"></i> ExportExcel</button>
                     </div>
                     @*<div class="col-md-3">
@@ -92,7 +92,7 @@
                                             <td style="text-align: center;"><i class="fa fa-circle text-red" style="font-size :large;"></i></td>
                                         }
                                         <td align="center">
-                                            <a class="btn btn-danger btn-sm" href="@Url.Action("Chennelpartner", "Partner",new { CustId= @item.CustId })">
+                                            <a class="btn btn-danger btn-sm" href="@Url.Action("Chennelpartner", "Partner",new { CustId= @item.CustId,EditId="1" })">
                                                 <i class="fa fa-eye">
                                                 </i>
 

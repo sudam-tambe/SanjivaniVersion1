@@ -9,7 +9,7 @@
 }, new { @class = "" }))
 {
     <div class="box box-danger" id="loading-example">
-        <div class="box-header" style="cursor: move;background-color: #007bff;cursor: move;color: white;">
+        <div class="box-header" style="cursor: move;background-color: white;cursor: move;color: white;">
             <!-- tools box -->
             <div class="pull-right box-tools">
 
@@ -18,28 +18,28 @@
             </div><!-- /. tools -->
 
 
-            <h3 class="box-title">CP Intraction</h3>
+            <h3 class="box-title" style="color:black">CP Intraction</h3>
         </div><!-- /.box-header -->
         <div class="box-body no-padding" style="background-color: whitesmoke;">
             <div class="row">
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-12">
                     @Html.HiddenFor(model => model.CustID)
                     @Html.HiddenFor(model => model.IntractionId)
                     <label for="exampleInputFile"></label>
                     @Html.EditorFor(model => model.Intraction, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.Intraction, "", new { @class = "text-danger" })
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-12" style="text-align:center">
 
-                    <div class="form-group col-md-6">
-                        <button type="submit" class="btn btn-primary" style="margin-top: 13px;"><i class="fa fa-save"></i> ADD</button>
+                    <div class="form-group col-md-12">
+                        <button type="submit" class="btn btn-primary" style="margin-top: 13px;background-color:black"><i class="fa fa-save"></i> ADD</button>
 
 
                     </div>
 
                 </div>
 
-                <div class="form-group col-md-8" id="_IntractionList">
+                <div class="form-group col-md-12" id="_IntractionList">
 
                 </div>
             </div>

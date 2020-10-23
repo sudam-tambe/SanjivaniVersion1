@@ -11,18 +11,19 @@
 
 {
     <div class="box box-danger" id="loading-example">
-        <div class="box-header" style="cursor: move;background-color: #007bff;cursor: move;color: white;">
+        <div class="box-header" style="cursor: move;background-color: white;cursor: move;color: white;">
             <!-- tools box -->
             <div class="pull-right box-tools">
 
             </div><!-- /. tools -->
 
 
-            <h3 class="box-title">Bank Detail</h3>
+            <h3 class="box-title" style="color:black">Bank Detail</h3>
         </div><!-- /.box-header -->
         <div class="box-body no-padding" style="background-color: whitesmoke;">
             <div class="row">
                 <div class="form-group col-md-3">
+                   
                     <label for="exampleInputEmail1">CP Bank Name</label>
                     @Html.DropDownListFor(model => model.BankName1, new SelectList(ViewBag.bank, "Value", "Text"), "--Select Bank--", new { @class = "form-control", })
                     @*@Html.EditorFor(model => model.BankName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Channel Partner Bank Name" } })*@
@@ -64,8 +65,12 @@
                 </div>
                 <div class="col-md-12">
                     <div class="col-md-3">
-                        <a class="btn btn-danger" onclick="CPBankDtlEnableTrue()"><i class="fa fa-edit"></i> Edit</a>
-                        <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save</button>
+                        <input type="hidden" id="hiddenId" name="custId" value=@Session["EditId"].ToString()>
+                        @if (Session["EditId"].ToString() != "0")
+                        {
+                            <a class="btn btn-danger" onclick="CPBankDtlEnableTrue()"><i class="fa fa-edit"></i> Edit</a>
+                        }
+                        <button type="submit" class="btn btn-primary" style="background: black;"><i class="fa fa-save"></i> Save</button>
                     </div>
                     <div class="col-md-1"></div>
                 </div>
@@ -113,7 +118,7 @@
         }
 
     }
-   
+
 
     var cek = /^[a-zA-Z\ \']+$/;
     function validateAccHName(form) {
@@ -132,21 +137,22 @@
 
     }
 
+    var name = $('#hiddenId').val();
+    if (name != "0") {
+        $(document).ready(function () {
+            console.log("dd");
+            $('#BankName1').prop('disabled', true);
+            $('#AccountNumber').prop('disabled', true);
+            $('#IFSCcode').prop('disabled', true);
+            $('#AccountHolderName').prop('disabled', true);
+            $('#AccountType').prop('disabled', true);
+            $('#PaymentBankCardName').prop('disabled', true);
+            $('#cardnumber').prop('disabled', true);
 
-    $(document).ready(function () {
-        console.log("dd");
-        $('#BankName1').prop('disabled', true);
-        $('#AccountNumber').prop('disabled', true);
-        $('#IFSCcode').prop('disabled', true);
-        $('#AccountHolderName').prop('disabled', true);
-        $('#AccountType').prop('disabled', true);
-        $('#PaymentBankCardName').prop('disabled', true);
-        $('#cardnumber').prop('disabled', true);
 
 
-
-    });
-
+        });
+    }
     function CPBankDtlEnableTrue() {
 
         $('#BankName1').prop('disabled', false);

@@ -31,6 +31,14 @@ namespace SanjivaniERP.Controllers
 
         public ActionResult _partialSetEditCPBusinessDetail(BusinessDetails BD)
         {
+            if(string.IsNullOrEmpty(Convert.ToString(BD.TypeofHosting1)))
+            {
+                BD.TypeofHosting1 = 0;
+            }
+            if (string.IsNullOrEmpty(Convert.ToString(BD.HostingPlatform1)))
+            {
+                BD.HostingPlatform1 = 0;
+            }
             BD.TypeofHosting = Convert.ToString(BD.TypeofHosting1);
             BD.HostingPlatform = Convert.ToString(BD.HostingPlatform1);
             BD.CustId = Convert.ToString(Session["CustId"]);
@@ -58,12 +66,22 @@ namespace SanjivaniERP.Controllers
             Session["Tab"] = "3";
             return RedirectToAction("Chennelpartner", "Partner");
         }
-        public ActionResult Chennelpartner(string CustId)
+        public ActionResult Chennelpartner(string CustId,string EditId)
         {
-            if (CustId != null)
+            if (CustId != "0" && CustId!=null)
+            {
                 Session["CustId"] = CustId;
+                if(EditId!=null)
+                Session["EditId"] = EditId;
+            }
+                
             else
+            {
+                if (EditId != null)
+                    Session["EditId"] = EditId;
                 CustId = Convert.ToString(Session["CustId"]);
+            }
+               
             ChennelpartnerModel dc = new ChennelpartnerModel();
 
 
@@ -470,6 +488,7 @@ namespace SanjivaniERP.Controllers
         public ActionResult _PartialCPPerstionalDtl(string CustId)
         {
             Session["Msg"] = "";
+            Session["CustId"] = CustId;
             ViewBag.StateList = new SelectList(objPartnerBAL.GetBindState(), "StateId", "StateName");
             ViewBag.BindCPCategory = new SelectList(objPartnerBAL.GetBindCPCategory(), "CategoryId", "CategoryName");
             if (CustId != "")
@@ -483,6 +502,7 @@ namespace SanjivaniERP.Controllers
         public ActionResult _PartialCPBusinessDtl(string CustId)
         {
             Session["Msg"] = "";
+            Session["CustId"] = CustId;
             ViewBag.TypeOfHosting = new SelectList(objPartnerBAL.GetTypeofHosting(), "TypeHostingId", "TypeofHosting");
             ViewBag.HostingPlatForm = new SelectList(objPartnerBAL.GetHostingPlatform(), "HostingPlatformId", "HostingPlatForm");
             ViewBag.StateList = new SelectList(objPartnerBAL.GetBindState(), "StateId", "StateName");
@@ -500,12 +520,15 @@ namespace SanjivaniERP.Controllers
         {
             Session["Msg"] = "";
             Session["Tab"] = "";
+            if (CustId == "")
+                CustId = "0";
             var list = objPartnerBAL.GetCountryStateForCPPersonal(Convert.ToInt32(CustId));
             return Json(list, JsonRequestBehavior.AllowGet);
         }
         public ActionResult _PartialgetCPBankDtl(string CustId)
         {
             Session["Msg"] = "";
+            Session["CustId"] = CustId;
             ViewBag.bank = new SelectList(objPartnerBAL.GetBank(), "BankId", "BankName");
             ViewBag.PaymentMode = new SelectList(objPartnerBAL.GetPaymentmode(), "PaymentModeId", "PaymentMode");
             ViewBag.Accountype = new SelectList(objPartnerBAL.GetAccountType(), "AccountTypeId", "AccountType");
@@ -534,6 +557,39 @@ namespace SanjivaniERP.Controllers
         }
         public ActionResult ApproveCp()
         {
+            string SourceDomain = "ftp://pioneers@103.235.106.17/shop.pioneersoft.co.in";
+            string DestinationDomain = "ftp://pioneers@103.235.106.17/" + Session["Domain"];
+            NetworkCredential credentials = new NetworkCredential("pioneers", "d@8Pg~4Ea0Dv$9C");
+           
+            {
+                string directoryUrl = DestinationDomain;
+
+                if (!DirectoryExists(directoryUrl))
+                {
+                    try
+                    {
+                        //Console.WriteLine($"Creating {name}");
+                        FtpWebRequest requestDir = (FtpWebRequest)WebRequest.Create(directoryUrl);
+                        requestDir.Method = WebRequestMethods.Ftp.MakeDirectory;
+                        requestDir.Credentials = credentials;
+                        requestDir.GetResponse().Close();
+                    }
+                    catch (WebException ex)
+                    {
+                        FtpWebResponse response = (FtpWebResponse)ex.Response;
+                        if (response.StatusCode == FtpStatusCode.ActionNotTakenFileUnavailable)
+                        {
+                            // probably exists already
+                        }
+                        else
+                        {
+                          //  RedirectToAction("ChannaPartnerList", "Partner");
+                        }
+                    }
+
+                }
+            }
+
             Session["Completemsg"] = "No";
             Session["Dothis"] = "1";
             bool res = objPartnerBAL.ApproveCP(Convert.ToInt32(Session["CustId"]));

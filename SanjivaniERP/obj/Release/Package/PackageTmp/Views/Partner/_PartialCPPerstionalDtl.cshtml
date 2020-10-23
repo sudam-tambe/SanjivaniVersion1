@@ -3,7 +3,7 @@
 {
     @Html.AntiForgeryToken()
     <div class="box box-danger shadow" id="loading-example">
-        <div class="box-header" style="cursor: move;background-color: #007bff;cursor: move;color: white;">
+        <div class="box-header" style="cursor: move;background-color: white;cursor: move;color: white;">
             <!-- tools box -->
             <div class="pull-right box-tools">
 
@@ -11,7 +11,7 @@
 
             </div><!-- /. tools -->
 
-            <h3 class="box-title">Personal Detail</h3>
+            <h3 class="box-title" style="color:black">Personal Detail</h3>
         </div><!-- /.box-header -->
         <div class="box-body no-padding" style="background-color: whitesmoke;">
             <div class="row">
@@ -66,8 +66,8 @@
                     @*<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Address">*@
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="exampleInputPassword1">Posted Code</label>
-                    @Html.EditorFor(model => model.PostedCode, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter Posted Code", onkeypress = "return fnAllowNumeric()" } })
+                    <label for="exampleInputPassword1">Postal Code</label>
+                    @Html.EditorFor(model => model.PostedCode, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter Postal Code", onkeypress = "return fnAllowNumeric()" } })
                     @*<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Address">*@
                 </div>
 
@@ -98,8 +98,12 @@ new SelectList(Enumerable.Empty<SelectListItem>
                 </div>
                 <div class="col-md-12">
                     <div class="col-md-3">
-                        <a class="btn btn-danger" onclick="CPPersonalEnableTrue()" style="color:white"><i class="fa fa-edit"></i> Edit</a>
-                        <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save</button>
+                        <input type="hidden" id="hiddenPerId" name="custId" value=@Session["EditId"].ToString()>
+                        @if (Session["EditId"].ToString() != "0")
+                        {
+                            <a class="btn btn-danger" onclick="CPPersonalEnableTrue()" style="color:white"><i class="fa fa-edit"></i> Edit</a>
+                        }
+                        <button type="submit" class="btn btn-primary" style="background: black;"><i class="fa fa-save"></i> Save</button>
                     </div>
                     <div class="col-md-3"></div>
                 </div>
@@ -113,12 +117,12 @@ new SelectList(Enumerable.Empty<SelectListItem>
 <script src="~/Content/js/jquery.min.js"></script>
 <script src="~/Content/js/countrystatecity.js"></script>
 <script src="~/Content/js/bootstrap.min.js"></script>
-@if(Session["Msg"]!="")
+@if (Session["Msg"] != "")
 {
     <script type="text/javascript">
         alert("Save Succesfull");
     </script>
-   
+
 }
 <script type="text/javascript">
     $(document).ready(function () {
@@ -138,7 +142,7 @@ new SelectList(Enumerable.Empty<SelectListItem>
         $("#EmailId2").val(data.EmailId2);
         $("#MobileNo2").val(data.MobileNo2);
     });
-       
+
     function CPPersonalEnableTrue() {
 
         $('#CPId').prop('disabled', false);
@@ -154,34 +158,35 @@ new SelectList(Enumerable.Empty<SelectListItem>
         $('#Cpwd').prop('disabled', false);
         $('#cityId').prop('disabled', false);
         $('#CpCategory').prop('disabled', false);
-        $('#cityId').prop('disabled', false);
         $('#countryId').prop('disabled', false);
         $('#City').prop('disabled', false);
         $('#State').prop('disabled', false);
     }
-    $(document).ready(function () {
-        console.log("dd");
-        $('#CPId').prop('disabled', true);
-        $('#UserName').prop('disabled', true);
-        $('#mobileNo').prop('disabled', true);
-        $('#chennelpartName').prop('disabled', true);
-        $('#EmailID').prop('disabled', true);
-        $('#Address').prop('disabled', true);
-        $('#PostedCode').prop('disabled', true);
+    var name = $('#hiddenPerId').val();
+    if (name != "0") {
+        $(document).ready(function () {
+            console.log("dd");
+            $('#CPId').prop('disabled', true);
+            $('#UserName').prop('disabled', true);
+            $('#mobileNo').prop('disabled', true);
+            $('#chennelpartName').prop('disabled', true);
+            $('#EmailID').prop('disabled', true);
+            $('#Address').prop('disabled', true);
+            $('#PostedCode').prop('disabled', true);
 
-        $('#stateId').prop('disabled', true);
-        $('#RegiDate').prop('disabled', true);
-        $('#pwd').prop('disabled', true);
-        $('#Cpwd').prop('disabled', true);
-        $('#cityId').prop('disabled', true);
-        $('#CpCategory').prop('disabled', true);
-        $('#cityId').prop('disabled', true);
+            $('#stateId').prop('disabled', true);
+            $('#RegiDate').prop('disabled', true);
+            $('#pwd').prop('disabled', true);
+            $('#Cpwd').prop('disabled', true);
+            $('#CpCategory').prop('disabled', true);
+            $('#cityId').prop('disabled', true);
 
-        $('#countryId').prop('disabled', true);
-        $('#City').prop('disabled', true);
-        $('#State').prop('disabled', true);
-        //$("#purchaselimit :input").prop("disabled", true);
+            $('#countryId').prop('disabled', true);
+            $('#City').prop('disabled', true);
+            $('#State').prop('disabled', true);
+            //$("#purchaselimit :input").prop("disabled", true);
 
-    });
-   
-        </script>
+        });
+    }
+
+</script>

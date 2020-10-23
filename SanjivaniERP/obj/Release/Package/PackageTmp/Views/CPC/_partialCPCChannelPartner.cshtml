@@ -132,6 +132,25 @@
 }
 <script type="text/javascript">
     $(document).ready(function () {
+        debugger;
+        var userId = $('#CustId').val();
+        var data = { CustId: userId };
+        var data = getJsonResult("@Url.Action("getuserdat", "Partner")", data);
+        var country = data.Country;
+        $("#countryId").val(data.Country);
+
+        $('#countryId').trigger("change");
+        $('#countryId').prop('disabled', false);
+        $("#stateId").val(data.StateId);
+        $("#stateId").trigger("change");
+        $("#cityId").val(data.City);
+        $("#Address2").val(data.Address2);
+        $("#EmailId2").val(data.EmailId2);
+        $("#MobileNo2").val(data.MobileNo2);
+
+    });
+
+    $(document).ready(function () {
         console.log("dd");
         $('#CPId').prop('disabled', true);
         $('#UserName').prop('disabled', true);
@@ -143,43 +162,19 @@
         $('#UserId').prop('disabled', true);
         $('#AlterMobileNo').prop('disabled', true);
         $('#CpCustomer').prop('disabled', true);
-        
-
-        $('#stateId').prop('disabled', true);
         $('#RegiDate').prop('disabled', true);
         $('#pwd').prop('disabled', true);
         $('#Cpwd').prop('disabled', true);
-        $('#cityId').prop('disabled', true);
         $('#CpCategory').prop('disabled', true);
+      
+
+        $('#countryId').prop('disabled', true);
+        $('#stateId').prop('disabled', true);
         $('#cityId').prop('disabled', true);
-
-        $('#Country').prop('disabled', true);
-        $('#City').prop('disabled', true);
-        $('#State').prop('disabled', true);
-        //$("#purchaselimit :input").prop("disabled", true);
+      //$("#purchaselimit :input").prop("disabled", true);
 
     });
-    $(document).ready(function () {
-        debugger;
-        //$('#MessegeBox').modal('show');
-
-        //$('#sub').prop('disabled',true);
-        var userId = $('#CustId').val();
-        var data = { CustId: userId };
-        var data = getJsonResult("@Url.Action("getuserdat", "Partner")", data);
-        var country = data.Country;
-        //var state=
-        $("#countryId").val(data.Country);
-
-        $('#countryId').trigger("change");
-        $("#stateId").val(data.StateId);
-        $("#stateId").trigger("change");
-        $("#cityId").val(data.City);
-        $("#Address2").val(data.Address2);
-        $("#EmailId2").val(data.EmailId2);
-        $("#MobileNo2").val(data.MobileNo2);
-
-    });
+   
     function CPPersonalEnableTrue() {
 
         $('#CPId').prop('disabled', false);
@@ -189,18 +184,15 @@
         $('#EmailID').prop('disabled', false);
         $('#Address').prop('disabled', false);
         $('#PostedCode').prop('disabled', false);
-        $('#stateId').prop('disabled', false);
         $('#RegiDate').prop('disabled', false);
         $('#pwd').prop('disabled', false);
         $('#Cpwd').prop('disabled', false);
-        $('#cityId').prop('disabled', false);
         $('#CpCategory').prop('disabled', false);
-        $('#cityId').prop('disabled', false);
-        $('#Country').prop('disabled', false);
-        $('#City').prop('disabled', false);
-        $('#State').prop('disabled', false);
         $('#UserId').prop('disabled', false);
         $('#AlterMobileNo').prop('disabled', false);
         $('#CpCustomer').prop('disabled', false);
+        $('#countryId').prop('disabled', false);
+        $('#stateId').prop('disabled', false);
+        $('#cityId').prop('disabled', false);
     }
 </script>

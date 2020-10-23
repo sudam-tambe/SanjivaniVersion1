@@ -6,162 +6,166 @@
     UpdateTargetId = "",
     OnSuccess = "Success12",
     OnFailure = "Failure12"
-},new { @class = "" }))
+}, new { @class = "" }))
 {
-    
+
     <div class="box box-danger" id="loading-example">
-    <div class="box-header" style="cursor: move;background-color: #007bff;cursor: move;color: white;">
-        <!-- tools box -->
-        <div class="pull-right box-tools">
+        <div class="box-header" style="cursor: move;background-color:white;cursor: move;color: white;">
+            <!-- tools box -->
+            <div class="pull-right box-tools">
 
-            @*<button class="btn btn-danger btn-sm" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse"><i class="fa fa-minus"></i></button>*@
+                @*<button class="btn btn-danger btn-sm" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse"><i class="fa fa-minus"></i></button>*@
 
-        </div><!-- /. tools -->
+            </div><!-- /. tools -->
 
-        <h3 class="box-title">Business Detail</h3>
-    </div><!-- /.box-header -->
-    <div class="box-body no-padding" style="background-color: whitesmoke;">
-        <div class="row">
-            <div class="form-group col-md-3">
-                <label for="exampleInputEmail1">Company Name</label>
-                @Html.EditorFor(model => model.CommanyName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Company Name" } })
-                @Html.ValidationMessageFor(model => model.CommanyName, "", new { @class = "text-danger" })
-            </div>
-            <div class="form-group col-md-3">
-                <label for="exampleInputPassword1">Company Type</label>
-                @Html.DropDownListFor(model => model.CommanyType, new SelectList(ViewBag.BindCompanyType, "Value", "Text"), "--Select Commany Type--", new { @class = "form-control", })
-            </div>
-            <div class="form-group col-md-3">
-                <label for="exampleInputPassword1">Company Reg. Number</label>
-                @Html.EditorFor(model => model.RegNumber, new { htmlAttributes = new { @class = "form-control", @placeholder = "Company Reg. Number" } })
-                @Html.ValidationMessageFor(model => model.RegNumber, "", new { @class = "text-danger" })
-            </div>
-            <div class="form-group col-md-3">
-                <label for="exampleInputPassword1">Company GST Reg Number</label>
-                @Html.EditorFor(model => model.GSTRegNumber, new { htmlAttributes = new { @class = "form-control", @placeholder = "Company GST Reg Number" } })
-                @Html.ValidationMessageFor(model => model.GSTRegNumber, "", new { @class = "text-danger" })
-            </div>
-            <div class="form-group col-md-3">
-                <label for="exampleInputPassword1">Company WebSite</label>
-                @Html.EditorFor(model => model.webSite, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Company WebSite" } })
-            </div>
-            <div class="form-group col-md-3">
-                <label for="exampleInputPassword1">Line Of Business</label>
-                @Html.EditorFor(model => model.LineofBusiness, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Line Of Business" } })
-            </div>
-            <div class="form-group col-md-3">
-                <label for="exampleInputPassword1">Annual Turnover</label>
-                @Html.EditorFor(model => model.Annulturnoveer, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Annual Turnover", onkeypress = "return fnAllowNumeric()" } })
-            </div>
-            <div class="form-group col-md-3">
-                <label for="exampleInputPassword1">Contact Person Name </label>
-                @Html.EditorFor(model => model.ContactPersonName, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Contact Person Name", onfocusout = "return Contactname(this);" } })
-            </div>
+            <h3 class="box-title" style="color:black">Business Detail</h3>
+        </div><!-- /.box-header -->
+        <div class="box-body no-padding" style="background-color: whitesmoke;">
+            <div class="row">
+                <div class="form-group col-md-3">
+                    @Html.HiddenFor(model => model.CustId)
+                    <label for="exampleInputEmail1">Company Name</label>
+                    @Html.EditorFor(model => model.CommanyName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Company Name" } })
+                    @Html.ValidationMessageFor(model => model.CommanyName, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="exampleInputPassword1">Company Type</label>
+                    @Html.DropDownListFor(model => model.CommanyType, new SelectList(ViewBag.BindCompanyType, "Value", "Text"), "--Select Commany Type--", new { @class = "form-control", })
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="exampleInputPassword1">Company Reg. Number</label>
+                    @Html.EditorFor(model => model.RegNumber, new { htmlAttributes = new { @class = "form-control", @placeholder = "Company Reg. Number" } })
+                    @Html.ValidationMessageFor(model => model.RegNumber, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="exampleInputPassword1">Company GST Reg Number</label>
+                    @Html.EditorFor(model => model.GSTRegNumber, new { htmlAttributes = new { @class = "form-control", @placeholder = "Company GST Reg Number" } })
+                    @Html.ValidationMessageFor(model => model.GSTRegNumber, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="exampleInputPassword1">Company WebSite</label>
+                    @Html.EditorFor(model => model.webSite, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Company WebSite" } })
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="exampleInputPassword1">Line Of Business</label>
+                    @Html.EditorFor(model => model.LineofBusiness, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Line Of Business" } })
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="exampleInputPassword1">Annual Turnover</label>
+                    @Html.EditorFor(model => model.Annulturnoveer, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Annual Turnover", onkeypress = "return fnAllowNumeric()" } })
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="exampleInputPassword1">Contact Person Name </label>
+                    @Html.EditorFor(model => model.ContactPersonName, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Contact Person Name", onfocusout = "return Contactname(this);" } })
+                </div>
 
-            <div class="form-group col-md-3">
-                <label for="exampleInputPassword1">Designation</label>
-                @Html.EditorFor(model => model.Designation, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Designation" } })
-            </div>
-            <div class="form-group col-md-3">
-                <label for="exampleInputPassword1">Contact Number</label>
-                @Html.EditorFor(model => model.BContactnumber, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Contact Number", onkeypress = "return fnAllowNumeric()" } })
-            </div>
-            <div class="form-group col-md-3">
-                <label for="exampleInputPassword1">Alternate Contact Number</label>
-                @Html.EditorFor(model => model.ABContactnumber, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Alternate Contact Number", onkeypress = "return fnAllowNumeric()" } })
-            </div>
-            <div class="form-group col-md-3">
-                <label for="exampleInputPassword1">Email Id </label>
-                @Html.EditorFor(model => model.Emailid, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Email Id", onfocusout = "validateBusnessEmail();" } })
-            </div>
-            <div class="form-group col-md-3">
-                <label for="exampleInputPassword1">Current ERP</label>
-                @Html.EditorFor(model => model.ERP, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Current ERP" } })
-            </div>
-            <div class="form-group col-md-3">
-                <label for="exampleInputPassword1">Current Hosting Provider</label>
-                @Html.EditorFor(model => model.HostingProvider, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Current Hosting Provider" } })
-            </div>
-            <div class="form-group col-md-3">
-                <label for="exampleInputPassword1">Hosting Platfrom</label>
-                @*@Html.EditorFor(model => model.HostingPlatform, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Hosting Platfrom" } })*@
-                @Html.DropDownListFor(model => model.HostingPlatform1, new SelectList(ViewBag.HostingPlatForm, "Value", "Text"), "--Select Hosting Platfrom--", new { @class = "form-control", @required = "required" })
-            </div>
-            <div class="form-group col-md-3">
-                <label for="exampleInputPassword1">Type of Hosting</label>
-                @*@Html.EditorFor(model => model.TypeofHosting, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Type of Hosting" } })*@
-                @Html.DropDownListFor(model => model.TypeofHosting1, new SelectList(ViewBag.TypeOfHosting, "Value", "Text"), "--Select Type of Hosting--", new { @class = "form-control", @required = "required" })
-            </div>
-            <div class="form-group col-md-3">
-                <label for="exampleInputPassword1">No.of WebSite Hosted</label>
-                @Html.EditorFor(model => model.NoOfWebSiteHos, new { htmlAttributes = new { @class = "form-control", @Placeholder = "No.of WebSite Hosted", onkeypress = "return fnAllowNumeric()" } })
-            </div>
-            <div class="form-group col-md-3">
-                <label for="exampleInputPassword1">Current Email Provider</label>
-                @Html.EditorFor(model => model.CurrentEmailProvider, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Current Email Provider" } })
-            </div>
-            <div class="form-group col-md-3">
-                <label for="exampleInputPassword1">Count Of Emails</label>
-                @Html.EditorFor(model => model.CountofEmail, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Count Of Emails", onkeypress = "return fnAllowNumeric()" } })
-            </div>
-            <div class="form-group col-md-3">
-                <label for="exampleInputPassword1">Your Store Front Domain</label>
-                @Html.EditorFor(model => model.CurrentDomainProvide, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Your Store Front Domain" , @required = "required" } })
-            </div>
-            <div class="form-group col-md-3">
-                <label for="exampleInputPassword1">Count Of Domains</label>
-                @Html.EditorFor(model => model.CurrentDomainCount, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Count Of Domains", onkeypress = "return fnAllowNumeric()" } })
-            </div>
-            <div class="form-group col-md-3">
-                <label for="exampleInputPassword1">Count Of SSL Certificate</label>
-                @Html.EditorFor(model => model.SSLCertificateCount, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Count Of SSL Certificate", onkeypress = "return fnAllowNumeric()" } })
-            </div>
-            <div class="form-group col-md-3">
-                <label for="exampleInputPassword1">Office Address</label>
-                @Html.EditorFor(model => model.OfficeAddres, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Office Address" } })
-            </div>
-            <div class="form-group col-md-3">
-                <label for="exampleInputPassword1">Posted Code</label>
-                @Html.EditorFor(model => model.PostedCode1, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter Posted Code", onkeypress = "return fnAllowNumeric()" } })
-                @*<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Address">*@
-            </div>
-            <div class="form-group col-md-3">
-                <label for="exampleInputEmail1">Country</label>
-                @Html.DropDownListFor(model => model.Country,
+                <div class="form-group col-md-3">
+                    <label for="exampleInputPassword1">Designation</label>
+                    @Html.EditorFor(model => model.Designation, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Designation" } })
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="exampleInputPassword1">Contact Number</label>
+                    @Html.EditorFor(model => model.BContactnumber, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Contact Number", onkeypress = "return fnAllowNumeric()" } })
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="exampleInputPassword1">Alternate Contact Number</label>
+                    @Html.EditorFor(model => model.ABContactnumber, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Alternate Contact Number", onkeypress = "return fnAllowNumeric()" } })
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="exampleInputPassword1">Email Id </label>
+                    @Html.EditorFor(model => model.Emailid, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Email Id", onfocusout = "validateBusnessEmail();" } })
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="exampleInputPassword1">Current ERP</label>
+                    @Html.EditorFor(model => model.ERP, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Current ERP" } })
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="exampleInputPassword1">Current Hosting Provider</label>
+                    @Html.EditorFor(model => model.HostingProvider, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Current Hosting Provider" } })
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="exampleInputPassword1">Hosting Platfrom</label>
+                    @*@Html.EditorFor(model => model.HostingPlatform, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Hosting Platfrom" } })*@
+                    @Html.DropDownListFor(model => model.HostingPlatform1, new SelectList(ViewBag.HostingPlatForm, "Value", "Text"), "--Select Hosting Platfrom--", new { @class = "form-control" })
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="exampleInputPassword1">Type of Hosting</label>
+                    @*@Html.EditorFor(model => model.TypeofHosting, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Type of Hosting" } })*@
+                    @Html.DropDownListFor(model => model.TypeofHosting1, new SelectList(ViewBag.TypeOfHosting, "Value", "Text"), "--Select Type of Hosting--", new { @class = "form-control" })
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="exampleInputPassword1">No.of WebSite Hosted</label>
+                    @Html.EditorFor(model => model.NoOfWebSiteHos, new { htmlAttributes = new { @class = "form-control", @Placeholder = "No.of WebSite Hosted", onkeypress = "return fnAllowNumeric()" } })
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="exampleInputPassword1">Current Email Provider</label>
+                    @Html.EditorFor(model => model.CurrentEmailProvider, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Current Email Provider" } })
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="exampleInputPassword1">Count Of Emails</label>
+                    @Html.EditorFor(model => model.CountofEmail, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Count Of Emails", onkeypress = "return fnAllowNumeric()" } })
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="exampleInputPassword1">Your Store Front Domain</label>
+                    @Html.EditorFor(model => model.CurrentDomainProvide, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Your Store Front Domain", @required = "required" } })
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="exampleInputPassword1">Count Of Domains</label>
+                    @Html.EditorFor(model => model.CurrentDomainCount, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Count Of Domains", onkeypress = "return fnAllowNumeric()" } })
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="exampleInputPassword1">Count Of SSL Certificate</label>
+                    @Html.EditorFor(model => model.SSLCertificateCount, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Count Of SSL Certificate", onkeypress = "return fnAllowNumeric()" } })
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="exampleInputPassword1">Office Address</label>
+                    @Html.EditorFor(model => model.OfficeAddres, new { htmlAttributes = new { @class = "form-control", @Placeholder = "Office Address" } })
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="exampleInputPassword1">Postal Code</label>
+                    @Html.EditorFor(model => model.PostedCode1, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter Postal Code", onkeypress = "return fnAllowNumeric()" } })
+                    @*<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Address">*@
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="exampleInputEmail1">Country</label>
+                    @Html.DropDownListFor(model => model.Country,
        Enumerable.Empty<SelectListItem>
            (),
            "Select Country",
            new { @class = "countries order-alpha dropdown form-control", @id = "countryId" })
 
-            </div>
-            <div class="form-group col-md-3">
-                <label for="exampleInputEmail1">State</label>
-                @Html.DropDownListFor(m => m.State,
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="exampleInputEmail1">State</label>
+                    @Html.DropDownListFor(m => m.State,
                new SelectList(Enumerable.Empty<SelectListItem>
                    (), "StateId", "State"),
                    "Select State",
                    new { @class = "states order-alpha dropdown form-control", @id = "stateId" })
-            </div>
-            <div class="form-group col-md-3">
-                <label for="exampleInputEmail1">City</label>
-                @Html.DropDownListFor(m => m.City,
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="exampleInputEmail1">City</label>
+                    @Html.DropDownListFor(m => m.City,
        new SelectList(Enumerable.Empty<SelectListItem>
            (), "StateId", "State"),
            "Select City",
            new { @class = "cities order-alpha dropdown form-control", @id = "cityId" })
-            </div>
-            <div class="col-md-12">
-                <div class="col-md-3">
-
-                    <a class="btn btn-danger" onclick="EnableTrue()"><i class="fa fa-edit"></i> Edit</a>
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save</button>
                 </div>
-                <div class="col-md-1"></div>
-            </div>
-        </div><!-- /.row - inside box -->
-    </div><!-- /.box-body -->
-    <div class="col-md-12">
-    </div>
+                <div class="col-md-12">
+                    <div class="col-md-3">
+                        <input type="hidden" id="hiddenBusId" name="custId" value=@Session["EditId"].ToString()>
+                        @if (Session["EditId"].ToString() != "0")
+                        {
+                            <a class="btn btn-danger" onclick="EnableTrue()"><i class="fa fa-edit"></i> Edit</a>
+                        }
+                        <button type="submit" class="btn btn-primary" style="background: black;"><i class="fa fa-save"></i> Save</button>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+            </div><!-- /.row - inside box -->
+        </div><!-- /.box-body -->
+        <div class="col-md-12">
+        </div>
 
     </div>
 
@@ -176,7 +180,7 @@
 @Scripts.Render("~/bundles/jqueryval")
 @Scripts.Render("~/bundles/ajax")
 <script type="text/javascript">
-   
+
     function Success12() {
         debugger
         var userId = $('#CustId').val();
@@ -216,39 +220,44 @@
         $('#PostedCode1').prop('disabled', false);
         $('#Designation').prop('disabled', false);
     }
-    $(document).ready(function () {
-        console.log("dd");
-        $('#countryId').prop('disabled', true);
-        $('#CommanyName').prop('disabled', true);
-        $('#CommanyType').prop('disabled', true);
-        $('#RegNumber').prop('disabled', true);
-        $('#GSTRegNumber').prop('disabled', true);
-        $('#webSite').prop('disabled', true);
-        $('#LineofBusiness').prop('disabled', true);
+    var name = $('#hiddenBusId').val();
+    if (name != "0") {
+        $(document).ready(function () {
+            console.log("dd");
+            $('#countryId').prop('disabled', true);
+            $('#CommanyName').prop('disabled', true);
+            $('#CommanyType').prop('disabled', true);
+            $('#RegNumber').prop('disabled', true);
+            $('#GSTRegNumber').prop('disabled', true);
+            $('#webSite').prop('disabled', true);
+            $('#LineofBusiness').prop('disabled', true);
 
-        $('#Annulturnoveer').prop('disabled', true);
-        $('#ContactPersonName').prop('disabled', true);
-        $('#BContactnumber').prop('disabled', true);
-        $('#ABContactnumber').prop('disabled', true);
-        $('#Emailid').prop('disabled', true);
-        $('#ERP').prop('disabled', true);
-        $('#HostingProvider').prop('disabled', true);
-        $('#HostingPlatform1').prop('disabled', true);
-        $('#TypeofHosting1').prop('disabled', true);
-        $('#NoOfWebSiteHos').prop('disabled', true);
-        $('#CurrentEmailProvider').prop('disabled', true);
-        $('#CountofEmail').prop('disabled', true);
-        $('#CurrentDomainProvide').prop('disabled', true);
-        $('#CurrentDomainCount').prop('disabled', true);
-        $('#SSLCertificateCount').prop('disabled', true);
-        $('#OfficeAddres').prop('disabled', true);
-        $('#SSLCertificateCount').prop('disabled', true);
-        $('#SSLCertificateCount').prop('disabled', true);
-        $('#PostedCode1').prop('disabled', true);
-        $('#Designation').prop('disabled', true);
+            $('#Annulturnoveer').prop('disabled', true);
+            $('#ContactPersonName').prop('disabled', true);
+            $('#BContactnumber').prop('disabled', true);
+            $('#ABContactnumber').prop('disabled', true);
+            $('#Emailid').prop('disabled', true);
+            $('#ERP').prop('disabled', true);
+            $('#HostingProvider').prop('disabled', true);
+            $('#HostingPlatform1').prop('disabled', true);
+            $('#TypeofHosting1').prop('disabled', true);
+            $('#NoOfWebSiteHos').prop('disabled', true);
+            $('#CurrentEmailProvider').prop('disabled', true);
+            $('#CountofEmail').prop('disabled', true);
+            $('#CurrentDomainProvide').prop('disabled', true);
+            $('#CurrentDomainCount').prop('disabled', true);
+            $('#SSLCertificateCount').prop('disabled', true);
+            $('#OfficeAddres').prop('disabled', true);
+            $('#SSLCertificateCount').prop('disabled', true);
+            $('#SSLCertificateCount').prop('disabled', true);
+            $('#PostedCode1').prop('disabled', true);
+            $('#Designation').prop('disabled', true);
+            $('#countryId').prop('disabled', true);
+            $('#City').prop('disabled', true);
+            $('#State').prop('disabled', true);
+        });
+    }
 
-    });
-    
     function Contactname() {
         debugger;
         var name = $('#ContactPersonName').val();
@@ -289,5 +298,5 @@
         }
 
     }
-   
+
 </script>
