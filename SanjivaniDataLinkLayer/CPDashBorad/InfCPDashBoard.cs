@@ -9,7 +9,10 @@ namespace SanjivaniDataLinkLayer.CPDashBorad
 {
     public interface InfCPDashBoard
     {
-        int getCpDashCount(string cPCustID);
-      List<ChennelpartnerModel> getCPCustomerList(string CPCustID);
+        int getCpDashCount(int cPCustID);
+        List<ChennelpartnerModel> getCPCustomerList(int CPCustID);
+        int SetPersonalDeatil(ChennelpartnerModel model);
+        ChennelpartnerModel GetCPForEdit(int cPCustId);
+        List<ProductBusinessModal> getCpProdcutList(int ProductId);
     }
 }

@@ -1,0 +1,71 @@
+﻿@model IEnumerable<SanjivaniModalView.ProductBusinessModal>
+<div class="modal fade" id="modal-default">
+    
+    <!-- /.modal-dialog -->
+</div>
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <button type="button" class="close cross" data-dismiss="modal">×</button>
+            <div class="myWallet nobor">
+
+            </div>
+
+            <div id="partial">
+
+
+                <embed id="pdfss" class="image_modal" src="" type="" height="260" width="460">
+            </div>
+
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<div class="box-body no-padding col-md-12">
+    <div class="box-body table-responsive" id="OrderDtl">
+        <table id="example1" class="table table-bordered table-striped">
+
+            <thead>
+                <tr style="color: white;background-color: #1c7faf;">
+                    <th align="center">Description</th>
+                    <th>Document</th>
+                    <th>View</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{ int rowNo = 0; }
+                @foreach (var item in Model)
+                {
+
+                    <tr>
+                        @*<td>@item.RegistrationDate</td>*@
+                        <td>
+                            @item.ProductName
+
+                        </td>
+
+                        <td>@item.ProductCode</td>
+                        <td>@item.DomainregistrationPrice</td>
+                        <td>@item.RenewalPrice</td>
+                        <td>@item.DomainProviderCode</td>
+                        @*<td align="center">
+                            <input type="hidden" id="WithdrawId1" name="rank" value=@item.Document />
+                            <a class="btn btn-danger btn-sm view" id="view" data-toggle="modal" data-target="#modal-default"><i class="fa fa-eye"></i>
+
+                        </td>*@
+
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+</div>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+
+<script src="~/Content/js/bootstrap.min.js"></script>
+<script src="~/Content/js/Comman.js"></script>
+
+

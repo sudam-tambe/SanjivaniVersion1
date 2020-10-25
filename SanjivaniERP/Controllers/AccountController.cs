@@ -23,6 +23,7 @@ namespace SanjivaniERP.Controllers
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
         ClsPartnerBAL objPartnerBAL = new ClsPartnerBAL();
+        ClsCCPDashboard objCPDash = new ClsCCPDashboard();
         public AccountController()
         {
         }
@@ -80,7 +81,7 @@ namespace SanjivaniERP.Controllers
             var userm = UserManager.FindByEmail(model.Email);
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
-            var result = await SignInManager.PasswordSignInAsync(userm.Email, model.Password, model.RememberMe, shouldLockout: false);
+           var result = await SignInManager.PasswordSignInAsync(userm.Email, model.Password, model.RememberMe, shouldLockout: false);
             switch (result)
             {
                 case SignInStatus.Success:
@@ -202,6 +203,56 @@ namespace SanjivaniERP.Controllers
             }
             return RedirectToAction("ChannelPartner", "CP");
         }
+
+        public async Task<ActionResult> _partialSetCPDashPersonalDeatil(FormCollection fc, ChennelpartnerModel model, HttpPostedFileBase[] postedFile)
+        {
+            // if (ModelState.IsValid)
+            {
+                if (string.IsNullOrWhiteSpace(model.CustId))
+                {
+                    var user = new ApplicationUser { UserName = model.UserName, Email = model.EmailID };
+                    var result = await UserManager.CreateAsync(user, model.pwd);
+                    if (result.Succeeded)
+                    {
+                        await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+                        var UserId = user.Id;
+                        // if (ModelState.IsValid)
+                        {
+                            model.AspUserId = UserId;
+                            model.ParentId = Convert.ToString(Session["UserId"]);
+                            //model.CustCategroryId = "2";
+                            var res = objCPDash.SetPersonalDeatil(model);
+                          
+                            if (Convert.ToInt32(res) > 0)
+                            {
+                                Session["Msg"] = "save";
+                                Session["Tab"] = "1";
+                                Session["CustId"] = res;
+                                model.CustId =Convert.ToString(Session["CustId"]);
+                                return RedirectToAction("CPCustomerDashAddNew", "CPDashboard", new { custid = model.CustId });
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    model.CustId = model.CustId;
+                    model.ParentId = Convert.ToString(Session["UserId"]);
+                    var res = objCPDash.SetPersonalDeatil(model);
+                    if (Convert.ToInt32(res) > 0)
+                    {
+                        Session["Tab"] = "1";
+                        Session["CustId"] = res;
+                        Session["Msg"] = "save";
+                        model.CustId = Convert.ToString(Session["CustId"]);
+                        return RedirectToAction("CPCustomerDashAddNew", "CPDashboard", new { custid = model.CustId });
+                    }
+                }
+            }
+            return RedirectToAction("CPCustomerDashAddNew", "CPDashboard", new { custid = model.CustId });
+        }
+
+        
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
