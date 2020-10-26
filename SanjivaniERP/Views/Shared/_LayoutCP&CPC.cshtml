@@ -32,7 +32,8 @@
 
     <!-- summernote -->
     <link href="~/Content/Boost/plugins/summernote/summernote-bs4.css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="~/Content/Boost/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="~/Content/Boost/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
@@ -168,19 +169,12 @@
             <a href="index3.html" class="brand-link">
                 <img src="~/Content/Boost/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
                      style="opacity: .8">
-                <span class="brand-text font-weight-light">CP & CPC</span>
+                <span class="brand-text font-weight-light">@Session["CustName"]</span>
             </a>
             <!-- Sidebar -->
             <div class="sidebar">
                 <!-- Sidebar user panel (optional) -->
-                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                    <div class="image">
-                        <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-                    </div>
-                    <div class="info">
-                        <a href="#" class="d-block">Alexander Pierce</a>
-                    </div>
-                </div>
+            
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -1802,5 +1796,8 @@
     <script src="~/Content/Boost/dist/js/pages/dashboard.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="~/Content/Boost/dist/js/demo.js"></script>
+    <script src="~/Content/Boost/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/Content/Boost/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/Content/Boost/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
 </body>
 </html>

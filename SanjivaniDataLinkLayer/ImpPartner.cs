@@ -537,7 +537,7 @@ namespace SanjivaniDataLinkLayer
             dinsert.Parameters.AddWithValue("@CustId", SqlDbType.Int).Value = CustID;
             DataSet DsList = objcon.GetDsByCommand(dinsert);
             CPCchannelPartnerModel List = new CPCchannelPartnerModel();
-            if (DsList.Tables[0].Rows[0] != null)
+            if (DsList.Tables[0].Rows.Count>0)
             {
 
                 List.CustId = Convert.ToString(DsList.Tables[0].Rows[0]["CustId"]);

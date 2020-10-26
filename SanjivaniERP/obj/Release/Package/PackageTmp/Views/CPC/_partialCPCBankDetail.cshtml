@@ -68,7 +68,7 @@
                 <div class="col-md-12">
                     <div class="col-md-3">
                         <a class="btn btn-danger" onclick="CPBankDtlEnableTrue()"><i class="fa fa-edit"></i> Edit</a>
-                        <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save</button>
+                        <button type="submit" id="btnSubmit" class="btn btn-primary"><i class="fa fa-save"></i> Save</button>
                     </div>
                     <div class="col-md-1"></div>
                 </div>
@@ -144,13 +144,11 @@
         $('#AccountType').prop('disabled', true);
         $('#PaymentBankCardName').prop('disabled', true);
         $('#cardnumber').prop('disabled', true);
-
-
-
+        $('#btnSubmit').prop('disabled', false);
     });
 
     function CPBankDtlEnableTrue() {
-
+        $('#btnSubmit').prop('disabled', false);
         $('#BankName1').prop('disabled', false);
         $('#AccountNumber').prop('disabled', false);
         $('#IFSCcode').prop('disabled', false);

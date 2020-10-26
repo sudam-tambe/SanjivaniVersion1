@@ -86,7 +86,7 @@ namespace SanjivaniDataLinkLayer.CPDashBorad
             dinsert.Parameters.AddWithValue("@CustId", SqlDbType.Int).Value = CPCustId;
             DataSet DsList = objcon.GetDsByCommand(dinsert);
             ChennelpartnerModel List = new ChennelpartnerModel();
-            if (DsList.Tables[0].Rows[0] != null)
+            if (DsList.Tables[0].Rows.Count>0)
             {
 
                 List.CustId = Convert.ToString(DsList.Tables[0].Rows[0]["CustId"]);

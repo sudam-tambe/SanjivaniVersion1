@@ -11,6 +11,7 @@ namespace SanjivaniERP.Controllers
 {
     public class CPDashboardController : Controller
     {
+        ClsProductBALcs objProductBAL = new ClsProductBALcs();
         ClsPartnerBAL objPartnerBAL = new ClsPartnerBAL();
         ClsCCPDashboard objCPDash = new ClsCCPDashboard();
         // GET: CPDashboard
@@ -20,24 +21,34 @@ namespace SanjivaniERP.Controllers
         }
         public ActionResult Dashboard()
         {
-            int CPCustId = 2022; /*Convert.ToInt32(Session["UserId"]);*/
+            Session["Msg"] = "";
+            int CPCustId = Convert.ToInt32(Session["UserId"]);
             var CPDashCount = objCPDash.getCpDashCount(CPCustId);
             ViewBag.CPCount = CPDashCount;
             return View();
         }
         public ActionResult CPCustomerList()
         {
-            int CPCustId = 2022; /*Convert.ToInt32(Session["UserId"]);*/
+           int CPCustId=Convert.ToInt32(Session["UserId"]);
             var CPCustomerList = objCPDash.GetCPCustomerList(CPCustId);
             ViewBag.CPCustDashBoardList = CPCustomerList;
             return View();
         }
-        public ActionResult CPCustomerDashAddNew(string CustId)
+        public ActionResult CPCustomerDashAddNew(string CustId,string EditId)
         {
-             if (CustId==null)
+            if (CustId != "0" && CustId != null)
+            {
                 Session["CustId"] = CustId;
+                if (EditId != null)
+                    Session["EditId"] = EditId;
+            }
+
             else
+            {
+                if (EditId != null)
+                    Session["EditId"] = EditId;
                 CustId = Convert.ToString(Session["CustId"]);
+            }
             ChennelpartnerModel dc = new ChennelpartnerModel();
 
             ViewBag.StateList = new SelectList(objPartnerBAL.GetBindState(), "StateId", "StateName");
@@ -90,6 +101,7 @@ namespace SanjivaniERP.Controllers
         }
         public ActionResult _SetCPDashDocument(HttpPostedFileBase[] postedFile)
         {
+            Session["Msg"] = "";
             Session["Tab"] = "3";
             int EventsTitleList = Convert.ToInt32(Session["CustId"]);
             var k = 0;
@@ -126,8 +138,8 @@ namespace SanjivaniERP.Controllers
         }
         public ActionResult _PartialgetProductList()
         {
-            int ProductId = 1002;
-            var d = objCPDash.getCpProdcutList(ProductId);
+            int CatId = 1;
+            var d = objProductBAL.GetDoaminList(CatId);
             return View(d);
         }
 
