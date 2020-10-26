@@ -1157,7 +1157,27 @@ namespace SanjivaniDataLinkLayer
             bool Result1 = objcon.InsrtUpdtDlt(dinsert1);
             return Result1;
         }
+        public Dashboard getDirectorDashboard()
+        {
+            SqlCommand dinsert = new SqlCommand("usp_GetDirectorDashboard");
+            
+            DataSet dtList = objcon.GetDsByCommand(dinsert);
+            Dashboard list1 = new Dashboard();
+            foreach (DataRow dr in dtList.Tables[0].Rows)
+            {
 
+                // BankDetails list1 = new BankDetails();
+                list1.CP = (dr["CP"].ToString());
+                list1.CPC = dr["CPC"].ToString();
+                list1.Customer = dr["Customer"].ToString();
+                list1.Director = dr["Director"].ToString();
+                list1.Freelancer = dr["Freelancer"].ToString();
+                list1.Affilate = dr["Affilate"].ToString();
+            
+
+            }
+            return list1;
+        }
 
     }
 }

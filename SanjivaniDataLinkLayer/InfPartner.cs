@@ -62,5 +62,6 @@ namespace SanjivaniDataLinkLayer
         List<Documents1> GetCPDocument(int custId);
         List<Documents1>getDirectorDocument(int custId);
         bool approveCP(int custId);
+        Dashboard getDirectorDashboard();
     }
 }

@@ -229,6 +229,11 @@ namespace SanjivaniBusinessLayer
             return objInfPub.DeleteUserIntraction(IntractionId);
         }
 
+        public Dashboard GetDirectorDashboard()
+        {
+            return objInfPub.getDirectorDashboard();
+        }
+
         public List<Documents1> getCpDocument(int custId)
         {
             return objInfPub.GetCPDocument(custId);

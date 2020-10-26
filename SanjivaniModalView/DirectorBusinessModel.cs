@@ -35,4 +35,13 @@ namespace SanjivaniModalView
         public string StatusId { get; set; }
         public BankDetails ObjBackDetails { get; set; }
     }
+    public class Dashboard
+    {
+        public string CP { get; set; }
+        public string CPC { get; set; }
+        public string Director { get; set; }
+        public string Customer { get; set; }
+        public string Freelancer { get; set; }
+        public string Affilate { get; set; }
+    }
 }

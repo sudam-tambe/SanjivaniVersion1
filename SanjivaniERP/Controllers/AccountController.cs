@@ -94,7 +94,7 @@ namespace SanjivaniERP.Controllers
                     Session["CustId"] = "0";
                     Session["Tab"] = "1";
                     if (Session["CustCategeory"].ToString() == "Director")
-                        return RedirectToAction("ChannaPartnerList", "Partner");
+                        return RedirectToAction("Dashboard", "Director");
                     else
                         return RedirectToAction("Dashboard", "CPDashboard");
                 case SignInStatus.LockedOut:

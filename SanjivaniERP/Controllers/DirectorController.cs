@@ -155,5 +155,10 @@ namespace SanjivaniERP.Controllers
             var d = objPartnerBAL.getDirectorDocument(CustId);
             return View(d);
         }
+        public ActionResult Dashboard()
+        {
+            var d = objPartnerBAL.GetDirectorDashboard();
+            return View(d);
+        }
     }
 }
