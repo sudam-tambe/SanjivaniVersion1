@@ -624,6 +624,9 @@ namespace SanjivaniDataLinkLayer
             BankDetails ObjBackDetails = new BankDetails();
             if (DsList.Tables[1].Rows.Count != 0)
             {
+               
+                ObjBackDetails.BankName1 = Convert.ToInt32(DsList.Tables[1].Rows[0]["BankName"]);
+
                 ObjBackDetails.BankName = DsList.Tables[1].Rows[0]["BankName"].ToString();
                 ObjBackDetails.AccountNumber = Convert.ToString(DsList.Tables[1].Rows[0]["AccountNo"]);
                 ObjBackDetails.IFSCcode = Convert.ToString(DsList.Tables[1].Rows[0]["IFSCCode"]);
@@ -631,6 +634,8 @@ namespace SanjivaniDataLinkLayer
                 ObjBackDetails.cardnumber = Convert.ToString(DsList.Tables[1].Rows[0]["FourDigitCardNo"]);
                 ObjBackDetails.paymentMode = Convert.ToString(DsList.Tables[1].Rows[0]["PaymentModeId"]);
                 ObjBackDetails.AccountType = Convert.ToString(DsList.Tables[1].Rows[0]["AccountTypeId"]);
+                ObjBackDetails.AccountHolderName = Convert.ToString(DsList.Tables[1].Rows[0]["AccountHolderName"]);
+                ObjBackDetails.PaymentBankCardName = Convert.ToString(DsList.Tables[1].Rows[0]["PaymentBankCardName"]);
             }
             return ObjBackDetails;
         }
@@ -931,7 +936,7 @@ namespace SanjivaniDataLinkLayer
             SqlCommand dinsert1 = new SqlCommand("Sp_SaveBankDetails");
             dinsert1.Parameters.AddWithValue("@CustId", SqlDbType.Int).Value = bd.CustId;
 
-            dinsert1.Parameters.AddWithValue("@BankName", SqlDbType.VarChar).Value = bd.BankName;
+            dinsert1.Parameters.AddWithValue("@BankName", SqlDbType.VarChar).Value = bd.BankName1;
 
             dinsert1.Parameters.AddWithValue("@AccountNo", SqlDbType.VarChar).Value = bd.AccountNumber;
 
@@ -940,6 +945,9 @@ namespace SanjivaniDataLinkLayer
             dinsert1.Parameters.AddWithValue("@PaymentModeId", SqlDbType.Int).Value = bd.paymentMode;
 
             dinsert1.Parameters.AddWithValue("@AccountTypeId", SqlDbType.Int).Value = bd.AccountType;
+            dinsert1.Parameters.AddWithValue("@AccountHolderName", SqlDbType.VarChar).Value = bd.AccountHolderName;
+            dinsert1.Parameters.AddWithValue("@FourDigitCardNo", SqlDbType.VarChar).Value = bd.cardnumber;
+            dinsert1.Parameters.AddWithValue("@PaymentBankCardName", SqlDbType.VarChar).Value = bd.PaymentBankCardName;
             bool Result1 = objcon.InsrtUpdtDlt(dinsert1);
             return Result1;
         }

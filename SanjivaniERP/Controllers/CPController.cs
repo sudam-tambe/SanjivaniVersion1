@@ -165,19 +165,38 @@ namespace SanjivaniERP.Controllers
             ViewBag.DirectorBusinessOwnerList = DirectorModel;
             return View();
         }
-        public ActionResult DirectorBusinessOwners(string CustId)
+        public ActionResult DirectorBusinessOwners(string CustId,string EditId)
         {
+            if (CustId != "0" && CustId != null)
+            {
+                Session["CustId"] = CustId;
+                if (EditId != null)
+                    Session["EditId"] = EditId;
+            }
+
+            else
+            {
+                if (EditId != null)
+                    Session["EditId"] = EditId;
+                CustId = Convert.ToString(Session["CustId"]);
+            }
+
             DirectorBusinessModel list = new DirectorBusinessModel();
             ViewBag.PaymentMode = new SelectList(objPartnerBAL.GetPaymentmode(), "PaymentModeId", "PaymentMode");
             ViewBag.Accountype = new SelectList(objPartnerBAL.GetAccountType(), "AccountTypeId", "AccountType");
             ViewBag.StateList = new SelectList(objPartnerBAL.GetBindState(), "StateId", "StateName");
-            if (CustId!="")
+            //if (CustId!="")
+            //{
+            //    if (!string.IsNullOrWhiteSpace(CustId.ToString()))
+            //    {
+            //        list = objPartnerBAL.GetDirectorBusinessOwners(CustId);
+            //        return View(list);
+            //    }
+            //}
+            if (CustId != null)
             {
-                if (!string.IsNullOrWhiteSpace(CustId.ToString()))
-                {
-                    list = objPartnerBAL.GetDirectorBusinessOwners(CustId);
-                    return View(list);
-                }
+                list.CustId = CustId;
+                return View(list);
             }
             return View();
         }

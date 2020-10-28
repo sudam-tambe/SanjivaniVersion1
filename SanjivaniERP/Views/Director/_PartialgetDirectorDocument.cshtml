@@ -82,23 +82,38 @@
 <script src="~/Content/js/bootstrap.min.js"></script>
 <script src="~/Content/js/Comman.js"></script>
 <script>
-    $("#view").click(function () {
-
-        //var id = $(this).attr("id");
+    $('body').on('click', '#view', function () {
+        debugger;
+        var id = $(this).siblings("#WithdrawId1").val();
+        debugger;
+       // var id = $(this).attr("id");
         //parts = id.split('.').pop().trim();
         //var currenturl = window.location.href;
 
-        //var Url = "http://" + currenturl.split("/")[2] + "/Content/KycDocument/" + id
-        //var url = Url
+        var Url = id
+        var url = Url
 
         debugger;
         $("#pdf").show();
+        $("#pdf").attr("src", url);
+    });
+    $(".btn btn-danger btn-sm view").click(function () {
+        debugger;
+        var id = $(this).attr("id");
+        //parts = id.split('.').pop().trim();
+        //var currenturl = window.location.href;
+
+        var Url = "http://" + currenturl.split("/")[2]  + id
+        var url = Url
+
+        debugger;
+       $("#pdf").show();
         //$("#pdf").attr("src", url);
-        $('#myModal').modal('show');
+       // $('#myModal').modal('show');
         //if (parts == "pdf") {
         //    $("#image1").hide();
         //    $("#pdf").show();
-        //    $("#pdf").attr("src", url);
+       $("#pdf").attr("src", url);
         //}
         //else {
         //    $("#pdf").hide();

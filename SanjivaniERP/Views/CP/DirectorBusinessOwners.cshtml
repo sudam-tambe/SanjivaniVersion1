@@ -84,86 +84,55 @@
     $('#tab_1').html(d);
 
 
-    @*var d = loadData("@Url.Action("_partialDirectorBankDetail", "Director")", data);
-    $('#tab_2').html(d);
-    var d = loadData("@Url.Action("_partialDirectorDocument", "Director")");
-    $('#tab_3').html(d);*@
-
     $('#T1').click(function () {
+        //$('#tab_2').html('');
+        //$('#tab_3').html('');
         var d = loadData("@Url.Action("_partialDirectorPersonalDetails", "Director")", data);
         $('#tab_1').html(d);
+        $('#one').addClass('active')
+        $('#tab_2').removeClass('active')
+        $('#tab_3').removeClass('active')
+
+        $('#tab_1').addClass('tab-pane active')
     });
 
     $('#T2').click(function () {
+        debugger
+        //alert('test');
+        //$('#tab_1').html('');
+        //$('#tab_3').html('');
+
+
+        $('#two').addClass('active')
+        //$('#tab_1').removeClass('active')
+        //$('#tab_3').removeClass('active')
+        //var custId = $("#CustId").val();
+        //var data = { Custid: custId };
         var d = loadData("@Url.Action("_partialDirectorBankDetail", "Director")", data);
         $('#tab_2').html(d);
+        $('#tab_1').removeClass('active')
+        $('#tab_3').removeClass('active')
+        $('#tab_2').addClass('tab-pane active')
     });
     $('#T3').click(function () {
         var d = loadData("@Url.Action("_partialDirectorDocument", "Director")", data);
         $('#tab_3').html(d);
+        $('#three').addClass('active')
+        $('#tab_1').removeClass('active')
+        $('#tab_2').removeClass('active')
+        $('#tab_3').addClass('tab-pane active')
     });
 
-    @*$(document).ready(function () {
-        var session = '@Session["Tab"]';
-
-        debugger;
-
-        $('.nav li').removeClass('active');
-        if (session == '2') {
-            $('#tab_1').html('');
-            $('#two').addClass('active')
-            $('#tab_1').removeClass('active')
-            $('#tab_3').removeClass('active')
-
-              var d = loadData("@Url.Action("_partialDirectorPersonalDetails", "Director")", data);
-        $('#tab_1').html(d);
-
-            $('#T2').addClass('nav-link active')
-            $('#T1').removeClass('active')
-            $('#T3').removeClass('active')
-
-            $('#tab_2').addClass('tab-pane fade active show')
-        }
-        else if (session == '3') {
-
-            $('#three').addClass('active')
-            $('#tab_1').removeClass('active')
-            $('#tab_2').removeClass('active')
-
-            var d = loadData("@Url.Action("_partialDirectorBankDetail", "Director")", data);
-            $('#tab_2').html(d);
-
-            $('#T3').addClass('nav-link active')
-            $('#T1').removeClass('active')
-            $('#T2').removeClass('active')
-            $('#tab_3').addClass('tab-pane fade active show')
-        }
-        else if (session == '4') {
-
-            $('#four').addClass('active')
-            $('#tab_1').removeClass('active')
-            $('#tab_2').removeClass('active')
-            $('#tab_3').removeClass('active')
-
-             var d = loadData("@Url.Action("_partialDirectorDocument", "Director")", data);
-           $('#tab_3').html(d);
-
-            $('#T1').removeClass('active')
-            $('#T2').removeClass('active')
-            $('#T3').removeClass('active')
-
-        }
-        else {
-            $('#one').addClass('active')
-            $('#tab_2').removeClass('active')
-            $('#tab_3').removeClass('active')
-
-            $('#T1').addClass('nav-link active')
-            $('#T2').removeClass('active')
-            $('#T3').removeClass('active')
-            $('#tab_1').addClass('tab-pane fade active show')
-        }
-    });*@
+    var session = '@Session["Tab"]';
+    if (session == '4')
+    {
+        $('#T3').addClass('nav-link active')
+        $('#T1').removeClass('active')
+        $('#T2').removeClass('active')
+         var d = loadData("@Url.Action("_partialDirectorDocument", "Director")", data);
+        $('#tab_3').html(d);
+        $('#tab_3').addClass('tab-pane fade active show')
+    }
 
     $("#fileuploaded").change(function () {
         var fileExtension = ['jpeg', 'jpg', 'png', 'pdf'];
@@ -194,41 +163,7 @@
             this.value = null;
         };
     };
-
-    $(document).ready(function () {
-        var session = '@Session["Tab"]';
-
-        debugger;
-
-$('.nav li').removeClass('active');
-debugger;
-            if (session == '2')
-            {
-
-                $('#two').addClass('active')
-                $('#tab_1').removeClass('active')
-                $('#tab_3').removeClass('active')
-
-                $('#tab_2').addClass('tab-pane active')
-            }
-            else if (session == '3')
-            {
-
-                $('#three').addClass('active')
-                $('#tab_1').removeClass('active')
-                $('#tab_2').removeClass('active')
-                $('#tab_3').addClass('tab-pane active')
-            }
-            else
-            {
-                $('#one').addClass('active')
-                $('#tab_2').removeClass('active')
-                $('#tab_3').removeClass('active')
-                $('#tab_1').addClass('tab-pane active')
-            }
-            //e.preventDefault();
-
-    });
+    
     function fnAllowNumeric() {
         if ((event.keyCode < 48 || event.keyCode > 57) && event.keyCode != 8) {
             event.keyCode = 0;
@@ -271,8 +206,6 @@ debugger;
 
     }
     function validateCaseSensitiveEmail() {
-
-
         var EmailId = $('#EmailID').val();
         if (EmailId != '') {
             var data = { Email: EmailId };
@@ -362,9 +295,9 @@ debugger;
 
 
     $('#UserId').change(function () {
-        debugger
+        alert("Test")
 
-        var userId = $('#UserId').val();
+        var userId = $('#UserName').val();
         var data = { UserId: userId };
         credit = 0;
 
@@ -373,8 +306,8 @@ debugger;
 
             alert('User Id Already Exists Please Enter Another');
 
-            $('#UserId').val('');
-            $('#UserId').focus();
+            $('#UserName').val('');
+            $('#UserName').focus();
         }
         else {
 
@@ -384,8 +317,6 @@ debugger;
 
 
     $('#EmailID').focusout(function () {
-
-
         var EmailId = $('#EmailID').val();
         var data = { Email: EmailId };
         credit = 0;
