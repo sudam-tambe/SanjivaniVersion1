@@ -126,12 +126,24 @@
     var session = '@Session["Tab"]';
     if (session == '4')
     {
+        $('#tab_1').html('');
+        $('#tab_2').html('');
         $('#T3').addClass('nav-link active')
         $('#T1').removeClass('active')
         $('#T2').removeClass('active')
          var d = loadData("@Url.Action("_partialDirectorDocument", "Director")", data);
         $('#tab_3').html(d);
         $('#tab_3').addClass('tab-pane fade active show')
+    }
+    if (session == '2')
+    {
+        //alert("sdfsdfj");
+        $('#tab_2').removeClass('active')
+        $('#tab_3').removeClass('active')
+        var d = loadData("@Url.Action("_partialDirectorPersonalDetails", "Director")", data);
+        $('#tab_1').html(d);
+        $('#one').addClass('active')
+        $('#tab_1').addClass('tab-pane active')
     }
 
     $("#fileuploaded").change(function () {
@@ -163,7 +175,7 @@
             this.value = null;
         };
     };
-    
+
     function fnAllowNumeric() {
         if ((event.keyCode < 48 || event.keyCode > 57) && event.keyCode != 8) {
             event.keyCode = 0;
@@ -294,27 +306,7 @@
 
 
 
-    $('#UserId').change(function () {
-        alert("Test")
-
-        var userId = $('#UserName').val();
-        var data = { UserId: userId };
-        credit = 0;
-
-        var d = getJsonResult("@Url.Action("CheckUserIdExits", "CP")", data);
-        if (d.Status == 400) {
-
-            alert('User Id Already Exists Please Enter Another');
-
-            $('#UserName').val('');
-            $('#UserName').focus();
-        }
-        else {
-
-        }
-
-    });
-
+    
 
     $('#EmailID').focusout(function () {
         var EmailId = $('#EmailID').val();

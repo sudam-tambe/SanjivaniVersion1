@@ -185,7 +185,7 @@ namespace SanjivaniERP.Controllers
             ViewBag.PaymentMode = new SelectList(objPartnerBAL.GetPaymentmode(), "PaymentModeId", "PaymentMode");
             ViewBag.Accountype = new SelectList(objPartnerBAL.GetAccountType(), "AccountTypeId", "AccountType");
             ViewBag.StateList = new SelectList(objPartnerBAL.GetBindState(), "StateId", "StateName");
-            //if (CustId!="")
+            //if (CustId != "")
             //{
             //    if (!string.IsNullOrWhiteSpace(CustId.ToString()))
             //    {
@@ -193,8 +193,9 @@ namespace SanjivaniERP.Controllers
             //        return View(list);
             //    }
             //}
-            if (CustId != null)
+            if (CustId != "0" && CustId != "")
             {
+               // list = objPartnerBAL.GetDirectorBusinessOwners(CustId);
                 list.CustId = CustId;
                 return View(list);
             }

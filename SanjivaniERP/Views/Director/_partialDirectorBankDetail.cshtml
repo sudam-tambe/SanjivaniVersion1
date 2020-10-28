@@ -139,29 +139,31 @@
     }
     
     var name = $('#hiddenPerId').val();
+    //alert(name);
     if (name != "0") {
         $(document).ready(function () {
             console.log("dd");
+            //alert(name);
             //alert("dd");
-            $('#BankName1').prop('disabled', false);
-            $('#AccountNumber').prop('disabled', false);
-            $('#IFSCcode').prop('disabled', false);
-            $('#AccountHolderName').prop('disabled', false);
-            $('#PaymentBankCardName').prop('disabled', false);
-            $('#AccountType').prop('disabled', false);
-            $('#cardnumber').prop('disabled', false);
+            $('#BankName1').prop('disabled', true);
+            $('#AccountNumber').prop('disabled', true);
+            $('#IFSCcode').prop('disabled', true);
+            $('#AccountHolderName').prop('disabled', true);
+            $('#PaymentBankCardName').prop('disabled', true);
+            $('#AccountType').prop('disabled', true);
+            $('#cardnumber').prop('disabled', true);
 
         });
     }
 
     function CPBankDtlEnableTrue1() {
-        alert("dd");
-        $('#BankName1').prop('disabled', true);
+        //alert("dd");
+        $('#BankName1').prop('disabled', false);
         $('#AccountNumber').prop('disabled', false);
-        $('#IFSCcode').prop('disabled', true);
-        $('#AccountHolderName').prop('disabled', true);
-        $('#PaymentBankCardName').prop('disabled', true);
-        $('#AccountType').prop('disabled', true);
-        $('#cardnumber').prop('disabled', true);
+        $('#IFSCcode').prop('disabled', false);
+        $('#AccountHolderName').prop('disabled', false);
+        $('#PaymentBankCardName').prop('disabled', false);
+        $('#AccountType').prop('disabled', false);
+        $('#cardnumber').prop('disabled', false);
     }
 </script>

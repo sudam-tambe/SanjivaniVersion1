@@ -329,9 +329,11 @@ namespace SanjivaniDataLinkLayer
             dinsert.Parameters.AddWithValue("@Email", SqlDbType.VarChar).Value = model.EmailID;
 
             dinsert.Parameters.AddWithValue("@Address", SqlDbType.VarChar).Value = model.Address;
-
+            dinsert.Parameters.AddWithValue("@Country", SqlDbType.VarChar).Value = model.Country;
             dinsert.Parameters.AddWithValue("@StateId", SqlDbType.Int).Value = model.State;
-
+            dinsert.Parameters.AddWithValue("@City", SqlDbType.VarChar).Value = model.City;
+            dinsert.Parameters.AddWithValue("@PostedCode", SqlDbType.Int).Value = model.PostedCode;
+            
             dinsert.Parameters.AddWithValue("@CustName", SqlDbType.VarChar).Value = model.OwnerName;
             dinsert.Parameters.AddWithValue("@ParentId", SqlDbType.Int).Value = model.ParentId;
             dinsert.Parameters.AddWithValue("@AspUserId", SqlDbType.NVarChar).Value = model.AspUserId;
@@ -584,6 +586,8 @@ namespace SanjivaniDataLinkLayer
                 List.CustCategroryId = DsList.Tables[0].Rows[0]["CustCategroryId"].ToString();
                 List.State = Convert.ToString(DsList.Tables[0].Rows[0]["StateId"]);
                 List.PostedCode= Convert.ToInt32(DsList.Tables[0].Rows[0]["PostedCode"]);
+                List.Country= Convert.ToString(DsList.Tables[0].Rows[0]["Country"]);
+                List.City = Convert.ToString(DsList.Tables[0].Rows[0]["City"]);
                 List.ObjBackDetails = getBankDetailsdata(CustID);
             }
             return List;
@@ -1146,13 +1150,10 @@ namespace SanjivaniDataLinkLayer
             List<Documents1> list = new List<Documents1>();
             foreach (DataRow dr in dtList.Tables[0].Rows)
             {
-
                 Documents1 list1 = new Documents1();
-
                 list1.Description = dr["Description"].ToString();
                 list1.Document = dr["Document"].ToString();
                 list.Add(list1);
-
             }
             return list;
         }

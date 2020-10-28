@@ -20,7 +20,7 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label for="exampleInputFile">Upload Company PAN Card</label>
-                    <input type="file" name="postedFile" class="form-control" id="fileuploaded1" accept="image/png,image/jpeg,image/jpg,application/pdf" required/>
+                    <input type="file" name="postedFile" class="form-control" id="fileuploaded1" accept="image/png,image/jpeg,image/jpg,application/pdf"/>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="exampleInputFile">Upload Adhaar Card </label>
@@ -39,7 +39,7 @@
         </div><!-- /.box-body -->
 
     </div>
-    <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save</button>
+    <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i>Save</button>
 }
 <div class="box box-danger" id="loading-example" style="margin-top:10px">
     <div class="box-header" style="cursor: move;background-color: #007bff;cursor: move;color: white;">
@@ -60,10 +60,24 @@
     </div><!-- /.box-body -->
 
 </div>
+@*<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+
+<script src="~/Content/js/bootstrap.min.js"></script>
+<script src="~/Content/js/Comman.js"></script>*@
+@Scripts.Render("~/bundles/jqueryval")
+@Scripts.Render("~/bundles/ajax")
 <script type="text/javascript">
-   var d = loadData("@Url.Action("_PartialgetDirectorDocument", "Director")", {});
+    //   var custId = $("#CustId").val();
+    //var data = { Custid: custId };
+    var d = loadData("@Url.Action("_PartialgetDirectorDocument", "Director")", {});
     $('#Doucment').html(d);
-    debugger;
+    @*var d = loadData("@Url.Action("_PartialGetDirectorDoc", "Director")", {});
+    $('#Doucment').html(d);*@
+
+  
     var a = $("#fileuploaded").val();
     var b = $("#fileuploaded1").val();
     var c = $("#fileuploaded2").val();

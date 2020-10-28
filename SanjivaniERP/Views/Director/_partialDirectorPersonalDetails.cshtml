@@ -120,9 +120,9 @@ new SelectList(Enumerable.Empty<SelectListItem>
 <script src="~/Content/js/countrystatecity.js"></script>
 <script src="~/Content/js/bootstrap.min.js"></script>
 <script type="text/javascript">
-   
+
     $(document).ready(function () {
-        debugger;
+       
         //$('#MessegeBox').modal('show');
         //$('#sub').prop('disabled',true);
         var userId = $('#CustId').val();
@@ -157,14 +157,15 @@ new SelectList(Enumerable.Empty<SelectListItem>
         $('#cityId').prop('disabled', false);
         $('#CpCategory').prop('disabled', false);
         $('#cityId').prop('disabled', false);
-        $('#Country').prop('disabled', false);
+        $('#countryId').prop('disabled', false);
         $('#City').prop('disabled', false);
         $('#State').prop('disabled', false);
         $('#UserId').prop('disabled', false);
         $('#AlterMobileNo').prop('disabled', false);
-       
+
     }
     var name = $('#hiddenPerId').val();
+    //alert(name);
     if (name != "0") {
         $(document).ready(function () {
             //console.log("dd");
@@ -183,11 +184,30 @@ new SelectList(Enumerable.Empty<SelectListItem>
             $('#Cpwd').prop('disabled', true);
             $('#CpCategory').prop('disabled', true);
             $('#cityId').prop('disabled', true);
-            $('#Country').prop('disabled', true);
+            $('#countryId').prop('disabled', true);
             $('#City').prop('disabled', true);
             $('#State').prop('disabled', true);
             //$("#purchaselimit :input").prop("disabled", true);
 
         });
     }
+    $('#UserId').change(function () {
+        var userId = $('#UserId').val();
+        var data = { UserId: userId };
+        credit = 0;
+
+        var d = getJsonResult("@Url.Action("CheckUserIdExits", "CP")", data);
+        if (d.Status == 400) {
+
+            alert('User Id Already Exists Please Enter Another');
+
+            $('#UserId').val('');
+            $('#UserId').focus();
+        }
+        else {
+
+        }
+
+    });
+
 </script>

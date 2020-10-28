@@ -684,7 +684,7 @@ namespace SanjivaniERP.Controllers
                                 Session["Msg"] = "Testjjhj";
                                 ViewBag.Msg = "Testjjhj";
                                 model.CustId = Convert.ToString(Session["CustId"]);
-                                return RedirectToAction("DirectorBusinessOwners", "CP", new { CustId = 0 });
+                                return RedirectToAction("DirectorBusinessOwners", "CP", new { CustId = model.CustId });
                             }
                         }
                     }

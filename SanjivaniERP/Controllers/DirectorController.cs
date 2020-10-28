@@ -21,12 +21,12 @@ namespace SanjivaniERP.Controllers
         public ActionResult _partialDirectorPersonalDetails(string Custid)
         {
             DirectorBusinessModel list = new DirectorBusinessModel();
-            if (Custid!="0")
+            if (Custid != "0")
             {
-               
-                    ViewBag.BindCPCategory = new SelectList(objPartnerBAL.GetBindCPCategory(), "CategoryId", "CategoryName");
-                    ViewBag.BindCPCustomer = new SelectList(objPartnerBAL.GetBindCPCustomer(), "CpCustomer", "CpCustomerName");
-                    list = objPartnerBAL.GetDirectorChannelEdit(Custid);
+
+                ViewBag.BindCPCategory = new SelectList(objPartnerBAL.GetBindCPCategory(), "CategoryId", "CategoryName");
+                ViewBag.BindCPCustomer = new SelectList(objPartnerBAL.GetBindCPCustomer(), "CpCustomer", "CpCustomerName");
+                list = objPartnerBAL.GetDirectorChannelEdit(Custid);
             }
             else
             {
@@ -41,9 +41,9 @@ namespace SanjivaniERP.Controllers
             BankDetails list1 = new BankDetails();
             if (Custid != "0")
             {
-                
-                    ViewBag.bank = new SelectList(objPartnerBAL.GetBankName(), "BankId", "BankName");
-                    ViewBag.Accountype = new SelectList(objPartnerBAL.GetAccountType(), "AccountTypeId", "AccountType");
+
+                ViewBag.bank = new SelectList(objPartnerBAL.GetBankName(), "BankId", "BankName");
+                ViewBag.Accountype = new SelectList(objPartnerBAL.GetAccountType(), "AccountTypeId", "AccountType");
                 //list = objPartnerBAL.GetDirectorChannelEdit(Custid);
                 var d = objPartnerBAL._partialGetCPBankDtl(Custid);
 
@@ -110,7 +110,7 @@ namespace SanjivaniERP.Controllers
                             //  var filePath = Server.MapPath("~/Documents/Logo/" + filename1);
                             // file.SaveAs(filePath);
                             var fileName = Path.GetFileName(file.FileName);
-                            var filePath = Path.Combine(Server.MapPath("~/Documents/Logo" + filename1));
+                            var filePath = Path.Combine(Server.MapPath("~/Documents/Logo/" + filename1));
                             file.SaveAs(filePath);
                             var UploadDocument = objPartnerBAL.SaveUploadDirectorDoc(filename1, EventsTitleList, Type);
                         }
@@ -155,8 +155,11 @@ namespace SanjivaniERP.Controllers
         {
             int CustId = Convert.ToInt32(Session["CustId"]);
             var d = objPartnerBAL.getDirectorDocument(CustId);
+            ViewBag.data = d;
             return View(d);
+
         }
+
         public ActionResult Dashboard()
         {
             var d = objPartnerBAL.GetDirectorDashboard();
