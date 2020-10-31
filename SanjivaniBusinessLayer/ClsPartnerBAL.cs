@@ -239,6 +239,16 @@ namespace SanjivaniBusinessLayer
             return objInfPub.GetCPDocument(custId);
         }
 
+        public List<GHDs> getGHDList()
+        {
+            return objInfPub.GetGHDList();
+        }
+
+        public bool setGHD(GHDs gHD)
+        {
+            return objInfPub.SetGHD(gHD);
+        }
+
         public bool ApproveCP(int CustId)
         {
             return objInfPub.approveCP(CustId);
@@ -248,7 +258,37 @@ namespace SanjivaniBusinessLayer
             return objInfPub.getDirectorDocument(custId);
         }
 
-        
+        public List<OrgChart> getcpOrg()
+        {
+            return objInfPub.GetcpOrg();
+        }
+
+        public List<OrgChart> getcpCOrg()
+        {
+            return objInfPub.GetcpcOrg();
+        }
+
+        public List<OrgChart> getDirectorOrg()
+        {
+            return objInfPub.GetDirectorOrg();
+        }
+
+        public List<OrgChart> getAffilatorOrg()
+        {
+            return objInfPub.GetAffilatorOrg();
+        }
+
+        public List<OrgChart> getCustomerOrg()
+        {
+            return objInfPub.GetCustomerOrg();
+        }
+
+        public bool DeleteGHD(int GHDId)
+        {
+            return objInfPub.deleteGHD(GHDId);
+        }
+
+
 
         //public int UpdateDirectorBusinessRegister(DirectorBusinessModel model, HttpPostedFileBase[] postedFile)
         //     {

@@ -63,5 +63,13 @@ namespace SanjivaniDataLinkLayer
         List<Documents1>getDirectorDocument(int custId);
         bool approveCP(int custId);
         Dashboard getDirectorDashboard();
+        List<GHDs> GetGHDList();
+        bool SetGHD(GHDs gHD);
+        List<OrgChart> GetcpOrg();
+        List<OrgChart> GetcpcOrg();
+        List<OrgChart> GetCustomerOrg();
+        List<OrgChart> GetDirectorOrg();
+        List<OrgChart> GetAffilatorOrg();
+        bool deleteGHD(int GHDId);
     }
 }

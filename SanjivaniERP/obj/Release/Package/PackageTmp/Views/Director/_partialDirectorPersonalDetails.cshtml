@@ -55,7 +55,7 @@
 
                 <div class="form-group col-md-3">
                     <label for="exampleInputPassword1">Email Id</label>
-                    @Html.EditorFor(model => model.EmailID, new { htmlAttributes = new { @class = "form-control", @placeholder = "Channel Partner Email Id", onblur = "validateCaseSensitiveEmail();" } })
+                    @Html.EditorFor(model => model.EmailID, new { htmlAttributes = new { @class = "form-control", @placeholder = "Email Id", onblur = "validateCaseSensitiveEmail();" } })
                     @*<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Channel Partner Email Id">*@
                 </div>
 
@@ -99,10 +99,19 @@ new SelectList(Enumerable.Empty<SelectListItem>
 
     </div>
     <div class="col-md-12">
-        <div class="col-md-3">
-            <a class="btn btn-danger" onclick="CPPersonalEnableTrue()" style="color:white"><i class="fa fa-edit"></i> Edit</a>
+        @*<div class="col-md-3">
+            <a class="btn btn-danger" onclick="EventsTitleList()" style="color:white"><i class="fa fa-edit"></i> Edit</a>
             <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save</button>
+        </div>*@
+        <div class="col-md-3">
+            <input type="hidden" id="hiddenPerId" name="custId" value=@Session["EditId"].ToString()>
+            @if (Session["EditId"].ToString() != "0")
+            {
+                <a class="btn btn-danger" onclick="CPPersonalEnableTrue()" style="color:white"><i class="fa fa-edit"></i> Edit</a>
+            }
+            <button type="submit" class="btn btn-primary" style="background: black;"><i class="fa fa-save"></i> Save</button>
         </div>
+
         <div class="col-md-3"></div>
     </div>
 }
@@ -111,38 +120,10 @@ new SelectList(Enumerable.Empty<SelectListItem>
 <script src="~/Content/js/countrystatecity.js"></script>
 <script src="~/Content/js/bootstrap.min.js"></script>
 <script type="text/javascript">
+
     $(document).ready(function () {
-        console.log("dd");
-        $('#CPId').prop('disabled', true);
-        $('#UserName').prop('disabled', true);
-        $('#mobileNo').prop('disabled', true);
-        $('#OwnerName').prop('disabled', true);
-        $('#EmailID').prop('disabled', true);
-        $('#Address').prop('disabled', true);
-        $('#PostedCode').prop('disabled', true);
-        $('#UserId').prop('disabled', true);
-        $('#AlterMobileNo').prop('disabled', true);
-        
-
-
-        $('#stateId').prop('disabled', true);
-        $('#RegiDate').prop('disabled', true);
-        $('#pwd').prop('disabled', true);
-        $('#Cpwd').prop('disabled', true);
-        $('#cityId').prop('disabled', true);
-        $('#CpCategory').prop('disabled', true);
-        $('#cityId').prop('disabled', true);
-
-        $('#Country').prop('disabled', true);
-        $('#City').prop('disabled', true);
-        $('#State').prop('disabled', true);
-        //$("#purchaselimit :input").prop("disabled", true);
-
-    });
-    $(document).ready(function () {
-        debugger;
+       
         //$('#MessegeBox').modal('show');
-
         //$('#sub').prop('disabled',true);
         var userId = $('#CustId').val();
         var data = { CustId: userId };
@@ -163,7 +144,7 @@ new SelectList(Enumerable.Empty<SelectListItem>
     function CPPersonalEnableTrue() {
 
         $('#CPId').prop('disabled', false);
-        $('#UserName').prop('disabled', false);
+        $('#UserId').prop('disabled', false);
         $('#mobileNo').prop('disabled', false);
         $('#OwnerName').prop('disabled', false);
         $('#EmailID').prop('disabled', false);
@@ -176,11 +157,57 @@ new SelectList(Enumerable.Empty<SelectListItem>
         $('#cityId').prop('disabled', false);
         $('#CpCategory').prop('disabled', false);
         $('#cityId').prop('disabled', false);
-        $('#Country').prop('disabled', false);
+        $('#countryId').prop('disabled', false);
         $('#City').prop('disabled', false);
         $('#State').prop('disabled', false);
         $('#UserId').prop('disabled', false);
         $('#AlterMobileNo').prop('disabled', false);
-       
+
     }
+    var name = $('#hiddenPerId').val();
+    //alert(name);
+    if (name != "0") {
+        $(document).ready(function () {
+            //console.log("dd");
+            $('#CPId').prop('disabled', true);
+            $('#UserId').prop('disabled', true);
+            $('#mobileNo').prop('disabled', true);
+            $('#chennelpartName').prop('disabled', true);
+            $('#EmailID').prop('disabled', true);
+            $('#Address').prop('disabled', true);
+            $('#PostedCode').prop('disabled', true);
+            $('#OwnerName').prop('disabled', true);
+            $('#AlterMobileNo').prop('disabled', true);
+            $('#stateId').prop('disabled', true);
+            $('#RegiDate').prop('disabled', true);
+            $('#pwd').prop('disabled', true);
+            $('#Cpwd').prop('disabled', true);
+            $('#CpCategory').prop('disabled', true);
+            $('#cityId').prop('disabled', true);
+            $('#countryId').prop('disabled', true);
+            $('#City').prop('disabled', true);
+            $('#State').prop('disabled', true);
+            //$("#purchaselimit :input").prop("disabled", true);
+
+        });
+    }
+    $('#UserId').change(function () {
+        var userId = $('#UserId').val();
+        var data = { UserId: userId };
+        credit = 0;
+
+        var d = getJsonResult("@Url.Action("CheckUserIdExits", "CP")", data);
+        if (d.Status == 400) {
+
+            alert('User Id Already Exists Please Enter Another');
+
+            $('#UserId').val('');
+            $('#UserId').focus();
+        }
+        else {
+
+        }
+
+    });
+
 </script>

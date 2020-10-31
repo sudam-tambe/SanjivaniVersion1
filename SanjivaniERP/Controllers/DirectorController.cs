@@ -165,5 +165,59 @@ namespace SanjivaniERP.Controllers
             var d = objPartnerBAL.GetDirectorDashboard();
             return View(d);
         }
+        public ActionResult GHD()
+        {
+            return View();
+        }
+        public ActionResult _partialGHD()
+        {
+            var d = objPartnerBAL.getGHDList();
+            return View(d);
+        }
+        public ActionResult SetGHD(GHDs test,FormCollection fc)
+        {
+            if (test.Link.ToString().Contains("embed") == true)
+            {
+                
+            }
+            else
+            {
+                string Link = test.Link.Replace("www.youtube.com/", "www.youtube.com/embed/");
+                test.Link = Link;
+            }
+
+            
+            bool res = objPartnerBAL.setGHD(test);
+            if (res)
+            {
+                return Json(new { Status = 200 }, JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                return Json(new { Status = 400 }, JsonRequestBehavior.AllowGet);
+            }
+        }
+        public ActionResult OrgChart()
+        {
+            ViewBag.CPOrg = objPartnerBAL.getcpOrg();
+            ViewBag.CPCOrg = objPartnerBAL.getcpCOrg();
+            ViewBag.Customer= objPartnerBAL.getCustomerOrg();
+            ViewBag.Director = objPartnerBAL.getDirectorOrg();
+            ViewBag.Affilator = objPartnerBAL.getAffilatorOrg();
+            return View();
+        }
+        public ActionResult DeleteGHD(string GHDId)
+        {
+         
+            bool res = objPartnerBAL.DeleteGHD(Convert.ToInt32(GHDId));
+            if (res)
+            {
+                return Json(new { Status = 200 }, JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                return Json(new { Status = 400 }, JsonRequestBehavior.AllowGet);
+            }
+        }
     }
 }

@@ -7,12 +7,12 @@
 <section class="content-header">
     <h1>
         Director
-        <small>Control panel</small>
+        @*<small>Control panel</small>*@
     </h1>
-    <ol class="breadcrumb">
+    @*<ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="active">   Director</li>
-    </ol>
+    </ol>*@
 </section>
 <section class="content">
 
@@ -21,6 +21,15 @@
         <section class="col-lg-12 connectedSortable ui-sortable">
             <!-- Box (with bar chart) -->
             <div class="box box-danger" id="loading-example">
+                <div class="box-header col-md-12" style="cursor: move;background-color: steelblue;cursor: move;color: white;">
+                    <!-- tools box -->
+                    <div class="form-group col-md-3" style="margin-top: 10px;">
+
+
+                        <a class="btn btn-danger btn-md" href="@Url.Action("DirectorBusinessOwners","CP",new { CustId="0",EditId="0"})" style="color:white"><i class="fa fa-plus"></i> Add New Director</a>
+                        <button class="btn btn-success btn-md" onclick="write_to_excel()"><i class="fa fa-file-o"></i> ExportExcel</button>
+                    </div>
+                </div>
                 <!-- /.box-header -->
                 <div class="box-body no-padding">
                     <div class="box-body table-responsive" id="OrderDtl">
@@ -65,7 +74,7 @@
                                             <td style="text-align: center;"><i class="fa fa-circle text-red" style="font-size :large;"></i></td>
                                         }
                                         <td align="center">
-                                            <a class="btn btn-danger btn-sm" href="@Url.Action("DirectorBusinessOwners", "CP",new { CustId= @item.CustId })">
+                                            <a class="btn btn-danger btn-sm" href="@Url.Action("DirectorBusinessOwners", "CP",new { CustId= @item.CustId,EditId="1" })">
                                                 <i class="fa fa-eye">
                                                 </i>
 

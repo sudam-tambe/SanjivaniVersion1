@@ -1188,6 +1188,139 @@ namespace SanjivaniDataLinkLayer
             return list1;
         }
 
+        public List<GHDs> GetGHDList()
+        {
+            SqlCommand dinsert = new SqlCommand("usp_GetGHD");
+           
+            DataSet dtList = objcon.GetDsByCommand(dinsert);
+            List<GHDs> list = new List<GHDs>();
+            foreach (DataRow dr in dtList.Tables[0].Rows)
+            {
+
+                GHDs list1 = new GHDs();
+
+                list1.GHDId = dr["GHDId"].ToString();
+                list1.GHD = dr["GHD"].ToString();
+                list1.Link = dr["Link"].ToString();
+                list.Add(list1);
+
+            }
+            return list;
+
+        }
+        public bool SetGHD(GHDs gHD)
+        {
+            SqlCommand dinsert1 = new SqlCommand("usp_SetGHD");
+            dinsert1.Parameters.AddWithValue("@GHDId", SqlDbType.Int).Value = 0;
+            dinsert1.Parameters.AddWithValue("@GHD", SqlDbType.VarChar).Value = gHD.GHD;
+            dinsert1.Parameters.AddWithValue("@Link", SqlDbType.NVarChar).Value = gHD.Link;
+            bool Result1 = objcon.InsrtUpdtDlt(dinsert1);
+            return Result1;
+        }
+        public List<OrgChart> GetcpOrg()
+        {
+            SqlCommand dinsert = new SqlCommand("usp_GetCPOrgChart");
+
+            DataSet dtList = objcon.GetDsByCommand(dinsert);
+            List<OrgChart> list = new List<OrgChart>();
+            foreach (DataRow dr in dtList.Tables[0].Rows)
+            {
+
+                OrgChart list1 = new OrgChart();
+
+                list1.Name = dr["CustName"].ToString();
+                list1.ProfilePic = dr["ProfilePic"].ToString();
+               
+                list.Add(list1);
+
+            }
+            return list;
+        }
+        public List<OrgChart> GetcpcOrg()
+        {
+            SqlCommand dinsert = new SqlCommand("usp_GetCPCOrgChart");
+
+            DataSet dtList = objcon.GetDsByCommand(dinsert);
+            List<OrgChart> list = new List<OrgChart>();
+            foreach (DataRow dr in dtList.Tables[0].Rows)
+            {
+
+                OrgChart list1 = new OrgChart();
+
+                list1.Name = dr["CustName"].ToString();
+                list1.ProfilePic = dr["ProfilePic"].ToString();
+
+                list.Add(list1);
+
+            }
+            return list;
+        }
+        public List<OrgChart> GetCustomerOrg()
+        {
+            SqlCommand dinsert = new SqlCommand("usp_GetCustomerOrgChart");
+
+            DataSet dtList = objcon.GetDsByCommand(dinsert);
+            List<OrgChart> list = new List<OrgChart>();
+            foreach (DataRow dr in dtList.Tables[0].Rows)
+            {
+
+                OrgChart list1 = new OrgChart();
+
+                list1.Name = dr["CustName"].ToString();
+                list1.ProfilePic = dr["ProfilePic"].ToString();
+
+                list.Add(list1);
+
+            }
+            return list;
+        }
+        public List<OrgChart> GetDirectorOrg()
+        {
+            SqlCommand dinsert = new SqlCommand("usp_GetDirectorOrgChart");
+
+            DataSet dtList = objcon.GetDsByCommand(dinsert);
+            List<OrgChart> list = new List<OrgChart>();
+            foreach (DataRow dr in dtList.Tables[0].Rows)
+            {
+
+                OrgChart list1 = new OrgChart();
+
+                list1.Name = dr["CustName"].ToString();
+                list1.ProfilePic = dr["ProfilePic"].ToString();
+
+                list.Add(list1);
+
+            }
+            return list;
+        }
+
+        public List<OrgChart> GetAffilatorOrg()
+        {
+            SqlCommand dinsert = new SqlCommand("usp_GetAffilatorOrgChart");
+
+            DataSet dtList = objcon.GetDsByCommand(dinsert);
+            List<OrgChart> list = new List<OrgChart>();
+            foreach (DataRow dr in dtList.Tables[0].Rows)
+            {
+
+                OrgChart list1 = new OrgChart();
+
+                list1.Name = dr["CustName"].ToString();
+                list1.ProfilePic = dr["ProfilePic"].ToString();
+
+                list.Add(list1);
+
+            }
+            return list;
+        }
+        public bool deleteGHD(int GHDId)
+        {
+            SqlCommand dinsert1 = new SqlCommand("usp_DeleteGHD");
+            dinsert1.Parameters.AddWithValue("@GHDId", SqlDbType.Int).Value = GHDId;
+
+            bool Result1 = objcon.InsrtUpdtDlt(dinsert1);
+            return Result1;
+        }
     }
 }
 
