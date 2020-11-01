@@ -190,11 +190,11 @@ namespace SanjivaniERP.Controllers
             bool res = objPartnerBAL.setGHD(test);
             if (res)
             {
-                return Json(new { Status = 200 }, JsonRequestBehavior.AllowGet);
+                return Json(new { success = true, responseText = "The attached file is not supported." }, JsonRequestBehavior.AllowGet);
             }
             else
             {
-                return Json(new { Status = 400 }, JsonRequestBehavior.AllowGet);
+                return Json(new { success = false, responseText = "The attached file is not supported." }, JsonRequestBehavior.AllowGet);
             }
         }
         public ActionResult OrgChart()
@@ -217,6 +217,42 @@ namespace SanjivaniERP.Controllers
             else
             {
                 return Json(new { Status = 400 }, JsonRequestBehavior.AllowGet);
+            }
+        }
+        public ActionResult VOC()
+        {
+            return View();
+        }
+        public ActionResult _partialVOC()
+        {
+            var d = objPartnerBAL.GetVOC();
+            return View(d);
+        }
+        public ActionResult DeleteVOC(string VocDtlId)
+        {
+            bool res = objPartnerBAL.deleteVOC(Convert.ToInt32(VocDtlId));
+            if (res)
+            {
+                return Json(new { Status = 200 }, JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                return Json(new { Status = 400 }, JsonRequestBehavior.AllowGet);
+            }
+        }
+        public ActionResult SetVOC(VOCust vc)
+        {
+            Session["VOC"] = vc.Voc;
+            if(vc.VocDtlId==null)
+                vc.VocDtlId="0";
+            bool res = objPartnerBAL.SetVOC(vc);
+            if (res)
+            {
+                return Json(new { success = true, responseText = "The attached file is not supported." }, JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                return Json(new { success = false, responseText = "The attached file is not supported." }, JsonRequestBehavior.AllowGet);
             }
         }
     }

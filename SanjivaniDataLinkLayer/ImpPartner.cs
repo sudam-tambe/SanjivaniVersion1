@@ -1321,6 +1321,43 @@ namespace SanjivaniDataLinkLayer
             bool Result1 = objcon.InsrtUpdtDlt(dinsert1);
             return Result1;
         }
+        public bool DeleteVOC(int VocDtlId)
+        {
+            SqlCommand dinsert1 = new SqlCommand("usp_DeleteVOC");
+            dinsert1.Parameters.AddWithValue("@VocDtlId", SqlDbType.Int).Value = VocDtlId;
+
+            bool Result1 = objcon.InsrtUpdtDlt(dinsert1);
+            return Result1;
+        }
+        public bool setVOC(VOCust vc)
+        {
+            SqlCommand dinsert1 = new SqlCommand("usp_SetVoc");
+            dinsert1.Parameters.AddWithValue("@Voc", SqlDbType.VarChar).Value = vc.Voc;
+            dinsert1.Parameters.AddWithValue("@Ans", SqlDbType.VarChar).Value = vc.Ans;
+            dinsert1.Parameters.AddWithValue("@VocDtlId", SqlDbType.Int).Value = Convert.ToInt32(vc.VocDtlId);
+            bool Result1 = objcon.InsrtUpdtDlt(dinsert1);
+            return Result1;
+        }
+        public List<VOCust> getVOC()
+        {
+            SqlCommand dinsert = new SqlCommand("usp_GetVOC");
+
+            DataSet dtList = objcon.GetDsByCommand(dinsert);
+            List<VOCust> list = new List<VOCust>();
+            foreach (DataRow dr in dtList.Tables[0].Rows)
+            {
+
+                VOCust list1 = new VOCust();
+
+                list1.Voc = dr["Voc"].ToString();
+                list1.VocDtlId = dr["VocDtlId"].ToString();
+                list1.Ans = dr["Ans"].ToString();
+                list1.VocId = dr["VocId"].ToString();
+                list.Add(list1);
+
+            }
+            return list;
+        }
     }
 }
 

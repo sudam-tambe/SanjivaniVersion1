@@ -288,6 +288,21 @@ namespace SanjivaniBusinessLayer
             return objInfPub.deleteGHD(GHDId);
         }
 
+        public List<VOCust> GetVOC()
+        {
+            return objInfPub.getVOC();
+        }
+
+        public bool deleteVOC(int VocDtlId)
+        {
+            return objInfPub.DeleteVOC(VocDtlId);
+        }
+
+        public bool SetVOC(VOCust vc)
+        {
+            return objInfPub.setVOC(vc);
+        }
+
 
 
         //public int UpdateDirectorBusinessRegister(DirectorBusinessModel model, HttpPostedFileBase[] postedFile)

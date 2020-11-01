@@ -71,5 +71,8 @@ namespace SanjivaniDataLinkLayer
         List<OrgChart> GetDirectorOrg();
         List<OrgChart> GetAffilatorOrg();
         bool deleteGHD(int GHDId);
+        List<VOCust> getVOC();
+        bool DeleteVOC(int VocDtlId);
+        bool setVOC(VOCust vc);
     }
 }
