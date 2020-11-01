@@ -44,4 +44,26 @@ namespace SanjivaniModalView
         public string Freelancer { get; set; }
         public string Affilate { get; set; }
     }
+    public class GHDs
+    {
+        public string GHDId { get; set; }
+        public string GHD { get; set; }
+        public string Link { get; set; }
+      
+    }
+    public class OrgChart
+    {
+        public string Name { get; set; }
+        public string ProfilePic { get; set; }
+       
+
+    }
+    public class VOCust
+    {
+        public string VocId { get; set; }
+        public string Voc { get; set; }
+
+        public string VocDtlId { get; set; }
+        public string Ans { get; set; }
+    }
 }
