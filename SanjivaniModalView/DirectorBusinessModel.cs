@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace SanjivaniModalView
 {
@@ -65,5 +66,14 @@ namespace SanjivaniModalView
 
         public string VocDtlId { get; set; }
         public string Ans { get; set; }
+    }
+    public class GlobalHelpdesk
+    {
+        public int ImgId { get; set; }
+
+        public int GID { get; set; }
+        public string Name { get; set; }
+        public HttpPostedFileBase[] files { get; set; }
+        public string imagfile { get; set; }
     }
 }
