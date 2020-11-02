@@ -1358,6 +1358,60 @@ namespace SanjivaniDataLinkLayer
             }
             return list;
         }
+        public List<GlobalHelpdesk> getGlobaldeskImgs(int GID)
+        {
+            SqlCommand dinsert = new SqlCommand("usp_GetGlobalImage");
+            dinsert.Parameters.AddWithValue("@GID", SqlDbType.Int).Value = GID;
+            DataSet dtList = objcon.GetDsByCommand(dinsert);
+            List<GlobalHelpdesk> list = new List<GlobalHelpdesk>();
+            foreach (DataRow dr in dtList.Tables[0].Rows)
+            {
+
+                GlobalHelpdesk list1 = new GlobalHelpdesk();
+                list1.ImgId = Convert.ToInt32(dr["ImgId"]);
+                list1.GID = Convert.ToInt32(dr["GID"]);
+                list1.Name = dr["Question"].ToString();
+                list1.imagfile = Convert.ToString(dr["Filepath"]);
+                list.Add(list1);
+
+            }
+            return list;
+        }
+
+        public int SaveGlobalHelDskQue(GlobalHelpdesk model, HttpPostedFileBase[] postedFile)
+        {
+            SqlCommand dinsert = new SqlCommand("usp_saveglobalhelpdeskque1");
+
+            if (model.files != null)
+                dinsert.Parameters.AddWithValue("@Filepath", SqlDbType.VarChar).Value = model.files[0].FileName;
+            else
+                dinsert.Parameters.AddWithValue("@Filepath", SqlDbType.VarChar).Value = DBNull.Value;
+
+
+            if (model.Name.ToString() != "")
+                dinsert.Parameters.AddWithValue("@Question", SqlDbType.VarChar).Value = model.Name;
+            else
+                dinsert.Parameters.AddWithValue("@Question", SqlDbType.VarChar).Value = DBNull.Value; ;
+
+            var Result = objcon.InsrtUpdtDlt(dinsert);
+            return 1;
+        }
+        //public int UploadGlobalHelpImg(string fileName, int value)
+        //{
+        //    SqlCommand dinsert1 = new SqlCommand("usp_saveglobalhelpdeskImg");
+        //    dinsert1.Parameters.AddWithValue("@GID", SqlDbType.Int).Value = value;
+        //    dinsert1.Parameters.AddWithValue("@Filepath", SqlDbType.VarChar).Value = fileName;
+        //    var Result1 = objcon.GetExcuteScaler(dinsert1);
+        //    return Result1;
+        //}
+
+        public bool deleteGlobalImg(int ImgId)
+        {
+            SqlCommand dinsert1 = new SqlCommand("usp_DeleteGlobalImg");
+            dinsert1.Parameters.AddWithValue("@ImgId", SqlDbType.Int).Value = ImgId;
+            bool Result1 = objcon.InsrtUpdtDlt(dinsert1);
+            return Result1;
+        }
     }
 }
 

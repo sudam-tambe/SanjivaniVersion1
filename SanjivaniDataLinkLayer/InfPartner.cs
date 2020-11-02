@@ -74,5 +74,8 @@ namespace SanjivaniDataLinkLayer
         List<VOCust> getVOC();
         bool DeleteVOC(int VocDtlId);
         bool setVOC(VOCust vc);
+        List<GlobalHelpdesk> getGlobaldeskImgs(int GID);
+        int SaveGlobalHelDskQue(GlobalHelpdesk model, HttpPostedFileBase[] postedFile);
+        bool deleteGlobalImg(int GID);
     }
 }

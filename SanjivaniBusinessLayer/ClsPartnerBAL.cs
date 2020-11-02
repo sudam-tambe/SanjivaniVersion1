@@ -303,7 +303,19 @@ namespace SanjivaniBusinessLayer
             return objInfPub.setVOC(vc);
         }
 
-
+        public List<GlobalHelpdesk> getGlobaldeskImgs(int GID)
+        {
+            return objInfPub.getGlobaldeskImgs(GID);
+        }
+        public int SaveGlobalHelDskQue(GlobalHelpdesk model, HttpPostedFileBase[] postedFile)
+        {
+            return objInfPub.SaveGlobalHelDskQue(model, postedFile);
+        }
+        
+        public bool DeleteGlobalImg(int GID)
+        {
+            return objInfPub.deleteGlobalImg(GID);
+        }
 
         //public int UpdateDirectorBusinessRegister(DirectorBusinessModel model, HttpPostedFileBase[] postedFile)
         //     {
